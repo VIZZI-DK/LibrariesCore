@@ -2,7 +2,6 @@ bin
 eclipse
 .settings
 build
-gradle
 .gradle
 .classpath
 .project
