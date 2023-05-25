@@ -16,8 +16,10 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
 @SideOnly(Side.CLIENT)
+@IgnoreObf
 public class GuiScrollingList<T> extends Gui {
 
     public static final float DEFAULT_SCROLL_SPEED = 10.0F;

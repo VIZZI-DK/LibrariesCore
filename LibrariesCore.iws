@@ -4,7 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e55d464f-cc28-483a-b492-fedd0e62e257" name="Changes" comment="test" />
+    <list default="true" id="e55d464f-cc28-483a-b492-fedd0e62e257" name="Changes" comment="test">
+      <change afterPath="$PROJECT_DIR$/1.12.2/.idea/modules/1.12.2.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.12.2/.idea/modules/1.12.2.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.12.2/src/main/resources/META-INF/core_at.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/CustomFont.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/CustomFontRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrariesCore.api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrariesCore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrariesCore.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrariesCore.iws" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrariesCore.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrariesCore.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CommonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CommonUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/GlyphCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/GlyphCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/StringCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/StringCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/EntityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/EntityUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/GuiScreenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/GuiScreenUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/InventoryUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/InventoryUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/MathUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/MathUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/NBTUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/NBTUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/PlayerUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/PlayerUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/RandomUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/RandomUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/config/ConfigComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/config/ConfigComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/config/Configurable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/config/Configurable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/config/Flex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/config/Flex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/RegistryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/RegistryEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/AbstractGuiScreenAdvanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/AbstractGuiScreenAdvanced.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonAdvanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonAdvanced.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonAdvancedImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonAdvancedImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonNew.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiExtended.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiExtended.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiScrollingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiScrollingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiTextFieldV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiTextFieldV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/AnimationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/AnimationHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiDrawUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiDrawUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/ScaleGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/ScaleGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/player/AbstractExtendedPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/player/AbstractExtendedPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/PreLoadableResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/PreLoadableResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/ResourceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/ResourceType.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,10 +148,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://C:/Program Files/Eclipse Adoptium/jdk-8.0.352.8-hotspot/src.zip!/java/util/function/BiConsumer.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/build/dirtyArtifacts/forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar!/net/minecraft/util/ResourceLocation.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -126,16 +179,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java/MyProduct/LibrariesCore/src/main/java/ru/vizzi/Utils/CustomFont&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\MyProduct\LibrariesCore\src\main\java\ru\vizzi\Utils\CustomFont" />
+      <recent name="D:\Java\MyProduct\LibrariesCore\lib" />
+    </key>
+  </component>
   <component name="RunManager" selected="Gradle.LibrariesCore [proGuardObfuscate]">
     <configuration default="true" factoryName="Applet" type="Applet">
       <module name="" />
@@ -159,9 +220,9 @@
     </configuration>
     <configuration name="Minecraft Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="GradleStart" />
-      <module name="LibrariesCore" />
+      <module name="LibrariesCore.main" />
       <option name="VM_PARAMETERS" value="-Xincgc -Xmx1024M -Xms1024M" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../LibrariesCore\eclipse" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/eclipse" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -191,7 +252,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -251,6 +312,12 @@
         <option name="BuildArtifacts" enabled="false" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Minecraft Client" />
+      <item itemvalue="Application.Minecraft Server" />
+      <item itemvalue="Gradle.LibrariesCore [build]" />
+      <item itemvalue="Gradle.LibrariesCore [proGuardObfuscate]" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.LibrariesCore [proGuardObfuscate]" />
@@ -295,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680299108137</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test">
+      <created>1680299604803</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680299604804</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

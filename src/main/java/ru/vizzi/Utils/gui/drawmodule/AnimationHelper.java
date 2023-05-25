@@ -1,5 +1,7 @@
 package ru.vizzi.Utils.gui.drawmodule;
 
+import ru.vizzi.Utils.obf.IgnoreObf;
+@IgnoreObf
 public class AnimationHelper {
     private static float animSpeed;
     private static double oldTime = 0;
@@ -14,11 +16,9 @@ public class AnimationHelper {
 
         oldTime = newTime;
     }
-
     public static float getAnimationSpeed() {
         return animSpeed;
     }
-
     public static float updateAnim(float value, float maxValue, float speed) {
         if(value < maxValue) {
             value += animSpeed * speed;
@@ -30,7 +30,6 @@ public class AnimationHelper {
 
         return value;
     }
-
     public static float updateSlowEndAnim(float value, float maxValue, float speed, float minSpeed) {
         if(speed > 0) {
             if(value < maxValue) {
@@ -50,7 +49,6 @@ public class AnimationHelper {
 
         return value;
     }
-
     public static float updateSlowStartAnim(float value, float maxValue, float speed, float minSpeed) {
         if(speed > 0) {
             if(value < maxValue) {
@@ -71,7 +69,6 @@ public class AnimationHelper {
 
         return value;
     }
-
     public static float getSlowAnim(float value, float minValue, float maxValue, float speed, float minSpeed) {
         float halfAnim = (maxValue + minValue) / 2f;
         float percentage = (value - minValue) / (maxValue - minValue);

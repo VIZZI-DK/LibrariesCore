@@ -38,6 +38,7 @@ import static org.lwjgl.opengl.GL30.glGenerateMipmap;
  * @todo Need to have a config file that allows overring the font search order by locale to properly support Traditional Chinese
  * hanzi, Simplified Chinese hanzi, Japanese kanji, and Korean hanja
  */
+
 public class GlyphCache
 {
     /**

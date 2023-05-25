@@ -10,8 +10,10 @@ import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
 @SideOnly(Side.CLIENT)
+@IgnoreObf
 public class GuiButtonNew extends Gui
 {
     protected static final ResourceLocation buttonTextures = new ResourceLocation("textures/gui/widgets.png");

@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import ru.vizzi.Utils.obf.IgnoreObf;
 import ru.vizzi.Utils.resouces.CoreAPI;
 import ru.vizzi.Utils.resouces.PreLoadableResource;
 
@@ -18,7 +19,7 @@ import java.awt.*;
 import static org.lwjgl.opengl.GL11.*;
 
 
-
+@IgnoreObf
 public class GuiUtils {
     private static Tessellator tessellator;
 
@@ -331,7 +332,7 @@ public class GuiUtils {
             glPushMatrix();
             glEnable(2896);
             glScaled(scale, scale, 0);
-            itemRendererNew.renderItemAndEffectIntoGUINew(Minecraft.getMinecraft().fontRenderer, Minecraft.getMinecraft().getTextureManager(), itemstack, (int) (posX / scale), (int) (posY / scale));
+            itemRendererNew.renderItemAndEffectIntoGUINew(Minecraft.getMinecraft().fontRenderer, Minecraft.getMinecraft().getTextureManager(), itemstack, (float) (posX / scale), (float) (posY / scale));
             glDisable(2896);
             glPopMatrix();
             

@@ -6,7 +6,9 @@ import java.util.List;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import net.minecraftforge.common.MinecraftForge;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
+@IgnoreObf
 public class CommonUtils {
 	
     public static boolean isServerSide() {

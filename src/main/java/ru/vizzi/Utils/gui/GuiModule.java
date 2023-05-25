@@ -3,7 +3,9 @@ package ru.vizzi.Utils.gui;
 import lombok.Getter;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
+@IgnoreObf
 public class GuiModule extends GuiExtended {
 
 	@Getter
@@ -49,5 +51,11 @@ public class GuiModule extends GuiExtended {
         
         super.drawScreen(mouseX, mouseY, partialTick);
 
+    }
+
+
+    @Override
+    public void keyTyped(char c, int id) {
+        super.keyTyped(c, id);
     }
 }

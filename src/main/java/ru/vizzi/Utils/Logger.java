@@ -2,10 +2,11 @@ package ru.vizzi.Utils;
 
 import lombok.Getter;
 import lombok.Setter;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
-
+@IgnoreObf
 public class Logger {
 
     private static final String TAG_INFO = " [INFO] ";

@@ -1,19 +1,17 @@
 package ru.vizzi.Utils.gui;
 
-import java.awt.Color;
-
 import lombok.Getter;
 import lombok.Setter;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiButton;
 import net.minecraft.util.ResourceLocation;
 import ru.vizzi.Utils.CustomFont.FontContainer;
-import ru.vizzi.Utils.CustomFont.FontType;
 import ru.vizzi.Utils.gui.drawmodule.AnimationHelper;
 import ru.vizzi.Utils.gui.drawmodule.GuiDrawUtils;
 import ru.vizzi.Utils.gui.drawmodule.GuiUtils;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
 @Getter
+@IgnoreObf
 @Setter
 public class GuiButtonAdvanced extends GuiButtonNew {
 
@@ -36,7 +34,7 @@ public class GuiButtonAdvanced extends GuiButtonNew {
 	public int colorText = -1;
 	public int colorTextHover = -1;
 	public int colorTextDisable = -1;
-	public FontContainer font = FontType.FUTURA_PT_MEDIUM.getFontContainer();
+	public FontContainer font;
 
 	public GuiButtonAdvanced(int id, float x, float y, float width, float height, String text) {
 		super(id, x, y, width, height, text);

@@ -1,12 +1,14 @@
 package ru.vizzi.Utils;
 
+import ru.vizzi.Utils.obf.IgnoreObf;
+
 import java.util.Comparator;
 import java.util.stream.Stream;
 
 /**
  * @author Zloy_GreGan
  */
-
+@IgnoreObf
 public class MathUtils {
 
     public static int getMaxNumber(Integer... number) {

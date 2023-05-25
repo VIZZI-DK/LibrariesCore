@@ -15,6 +15,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 @UtilityClass
+
 public class Flex {
 
     @Nonnull

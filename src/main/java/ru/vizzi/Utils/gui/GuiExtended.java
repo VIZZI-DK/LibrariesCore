@@ -7,11 +7,11 @@ import lombok.Getter;
 import lombok.Setter;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraftforge.client.event.GuiScreenEvent.ActionPerformedEvent;
-import net.minecraftforge.common.MinecraftForge;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
 @Getter
 @Setter
+@IgnoreObf
 public class GuiExtended extends AbstractGuiScreenAdvanced {
 
 	protected List<GuiModule> modules = new ArrayList<>();
@@ -166,8 +166,14 @@ public class GuiExtended extends AbstractGuiScreenAdvanced {
 			}
 		}
 	}
-	
-	protected void mouseMovedOrUp(int p_146286_1_, int p_146286_2_, int p_146286_3_)
+
+	@Override
+	public void mouseClickMove(int mouseX, int mouseY, int lastButtonClicked, long timeSinceMouseClick) {
+
+	}
+
+
+	public void mouseMovedOrUp(int p_146286_1_, int p_146286_2_, int p_146286_3_)
     {
         super.mouseMovedOrUp(p_146286_1_, p_146286_2_, p_146286_3_);
         if (this.currentButton != null && p_146286_3_ == 0)

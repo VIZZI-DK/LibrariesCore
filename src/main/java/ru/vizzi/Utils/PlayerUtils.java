@@ -5,11 +5,12 @@ import net.minecraft.client.network.NetHandlerPlayClient;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentText;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
 /**
  * @author Zloy_GreGan
  */
-
+@IgnoreObf
 public class PlayerUtils {
 
     public static boolean isPlayerOp(EntityPlayer entityPlayer) {

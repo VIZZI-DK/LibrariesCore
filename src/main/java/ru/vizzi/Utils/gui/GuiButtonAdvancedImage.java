@@ -1,10 +1,10 @@
 package ru.vizzi.Utils.gui;
 
-import java.awt.Color;
-import ru.vizzi.Utils.CustomFont.FontType;
 import ru.vizzi.Utils.gui.drawmodule.GuiDrawUtils;
 import ru.vizzi.Utils.gui.drawmodule.GuiUtils;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
+@IgnoreObf
 public class GuiButtonAdvancedImage extends GuiButtonAdvanced {
     private float xImage;
     private float yImage;

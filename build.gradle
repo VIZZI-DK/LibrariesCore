@@ -17,7 +17,7 @@ buildscript {
             changing = true
         }
         classpath 'tech.justagod:cutter:2.1.0-SNAPSHOT'
-        classpath 'net.sf.proguard:proguard-gradle:6.2.2'
+        classpath 'net.sf.proguard:proguard-gradle:6.0.2'
     }
 }
 
@@ -52,8 +52,7 @@ compileJava {
 dependencies {
         implementation group: 'org.reflections', name: 'reflections', version: '0.9.12'
             compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
-    implementation files('lib/json-20210307.jar')
-    implementation files('lib/mysql-connector-j-8.0.32.jar')
+    compile fileTree(include: ['*.jar'], dir: 'lib')
 
 }
 tasks.withType(JavaCompile){
@@ -81,57 +80,57 @@ task proGuardObfuscate(type: ProGuardTask) {
     injars 'build/libs/'+archivesBaseName+'-'+version+'.jar'
     outjars 'build/libs/'+archivesBaseName+'-'+version+'-obf.jar'
 
-    libraryjars 'proguard/rt.jar'
-    libraryjars 'proguard/libraries'
-
-    allowaccessmodification
-    overloadaggressively
-
-    printmapping 'proguard/obfuscate_mappings.txt'
-    obfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-    classobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-    packageobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
+    libraryjars "${System.getProperty("java.home")}/lib/rt.jar"
+    libraryjars "${System.getProperty("java.home")}/lib/jce.jar"
+    libraryjars sourceSets.main.compileClasspath
+    keepclasseswithmembers "class ru.vizzi.** { @class ru.vizzi.Utils.obf.IgnoreObf *;}"
 
 
-}
-task proGuardObfuscateClient(type: ProGuardTask) {
-    configuration 'proguard/config.txt'
-
-    injars 'build/libs/'+archivesBaseName+'-'+version+'-client.jar'
-    outjars 'build/libs/'+archivesBaseName+'-'+version+'-client-obf.jar'
-
-    libraryjars 'proguard/rt.jar'
-    libraryjars 'proguard/libraries'
-
-    allowaccessmodification
-    overloadaggressively
 
     printmapping 'proguard/obfuscate_mappings.txt'
-    obfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-    classobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-    packageobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-
-
-}
-task proGuardObfuscateServer(type: ProGuardTask) {
-    configuration 'proguard/config.txt'
-
-    injars 'build/libs/'+archivesBaseName+'-'+version+'-server.jar'
-    outjars 'build/libs/'+archivesBaseName+'-'+version+'-server-obf.jar'
-
-    libraryjars 'proguard/rt.jar'
-    libraryjars 'proguard/libraries'
-
-    allowaccessmodification
-    overloadaggressively
-
-    printmapping 'proguard/obfuscate_mappings.txt'
-    obfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-    classobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-    packageobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-
+    //obfuscationdictionary 'proguard/obfuscate_dictionary.txt'
+   // classobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
+    //packageobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
 
 }
+//task proGuardObfuscateClient(type: ProGuardTask) {
+//    configuration 'proguard/config.txt'
+//
+//    injars 'build/libs/'+archivesBaseName+'-'+version+'-client.jar'
+//    outjars 'build/libs/'+archivesBaseName+'-'+version+'-client-obf.jar'
+//
+//    libraryjars 'proguard/rt.jar'
+//    libraryjars 'proguard/libraries'
+//
+//    allowaccessmodification
+//    overloadaggressively
+//
+//    printmapping 'proguard/obfuscate_mappings.txt'
+//    obfuscationdictionary 'proguard/obfuscate_dictionary.txt'
+//    classobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
+//    packageobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
+//
+//
+//}
+//task proGuardObfuscateServer(type: ProGuardTask) {
+//    configuration 'proguard/config.txt'
+//
+//    injars 'build/libs/'+archivesBaseName+'-'+version+'-server.jar'
+//    outjars 'build/libs/'+archivesBaseName+'-'+version+'-server-obf.jar'
+//
+//    libraryjars 'proguard/rt.jar'
+//    libraryjars 'proguard/libraries'
+//
+//    allowaccessmodification
+//    overloadaggressively
+//
+//    printmapping 'proguard/obfuscate_mappings.txt'
+//    obfuscationdictionary 'proguard/obfuscate_dictionary.txt'
+//    classobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
+//    packageobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
+//
+//
+//}
 
 task zipMod(type: Zip) {
     archiveName = archivesBaseName+"-"+version+".zip"

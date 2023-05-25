@@ -44,6 +44,7 @@ import java.util.WeakHashMap;
  * ---> Glyph("B") ----------> GlyphCache.Entry("B")
  * </pre>
  */
+
 public class StringCache
 {
     /** Vertical adjustment (in pixels * 2) to string position because Minecraft uses top of string instead of baseline */
@@ -493,7 +494,7 @@ public class StringCache
         if(antiAliasEnabled)
         {
             GL11.glEnable(GL11.GL_BLEND);
-           GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+            GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
         }
 
         /* Using the Tessellator to queue up data in a vertex array and then draw all at once should be faster than immediate mode */
@@ -538,11 +539,14 @@ public class StringCache
                 int oldWidth = texture.width;
                 texture = digitGlyphs[fontStyle][c - '0'].texture;
                 int newWidth = texture.width;
-                glyphX += (oldWidth - newWidth) >> 1;
+                glyphX += oldWidth - newWidth >> 1;
             }
-            if(c >= '1' && c <= '9')
+            if(c >= '0' && c <= '9')
             {
-                glyphY += 0.9F;
+                int oldHeight = texture.height;
+                texture = digitGlyphs[fontStyle][c - '0'].texture;
+                int newHeight = texture.height;
+                glyphY += (oldHeight - newHeight) >> 1;
 
             }
 
@@ -729,7 +733,7 @@ public class StringCache
         /* The string index of the last glyph that wouldn't fit gives the total desired length of the string in characters */
         return index < glyphs.length ? glyphs[index].stringIndex : str.length();
     }
-    
+
     /**
      * Return the number of characters in a string that will completly fit inside the specified width when rendered.
      *
@@ -762,7 +766,7 @@ public class StringCache
 
         return str;
     }
-    
+
     public String trimStringToWidthSaveWords(String str, float width, boolean reverse)
     {
         int length = sizeString(str, width, true);
@@ -1272,5 +1276,4 @@ public class StringCache
         return advance;
     }
 }
-
 

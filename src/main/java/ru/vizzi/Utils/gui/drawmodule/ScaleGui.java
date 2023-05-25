@@ -1,7 +1,9 @@
 package ru.vizzi.Utils.gui.drawmodule;
 
 import net.minecraft.client.Minecraft;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
+@IgnoreObf
 public class ScaleGui {
 
     private static final Minecraft mc = Minecraft.getMinecraft();
@@ -16,8 +18,7 @@ public class ScaleGui {
     public static final float HALF_WIDTH = DEFAULT_WIDTH / 2f;
     public static final float DEFAULT_HEIGHT = 1080f;
     public static final float HALF_HEIGHT = DEFAULT_HEIGHT / 2f;
-    
-    public static int costil;
+
 
     public static void update() {
         refresh(FULL_HD);
@@ -32,15 +33,6 @@ public class ScaleGui {
         screenHeight = mc.displayHeight;
         screenCenterX = screenWidth / 2f;
         screenCenterY = screenHeight / 2f;
-        if(mc.isFullScreen()) {
-        	costil = 0;
-        } else {
-        	if(screenWidth>854) {
-        		costil = 63;
-    		} else {
-    			costil = 0;
-    		}
-        }
         
         float ratio =  screenWidth / (float) screenHeight;
         scaleValue = ratio < minAspect ? screenHeight / (1.0f + (minAspect - ratio)) : screenHeight;

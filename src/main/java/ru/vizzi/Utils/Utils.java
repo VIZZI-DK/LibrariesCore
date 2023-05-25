@@ -8,13 +8,14 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
 import java.util.List;
 
 /**
  * @author Zloy_GreGan
  */
-
+@IgnoreObf
 public class Utils {
 
     public static int getPlayersCount() {

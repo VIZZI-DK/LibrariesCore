@@ -27,8 +27,9 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.Tessellator;
 import ru.vizzi.Utils.gui.drawmodule.ScaleGui;
+import ru.vizzi.Utils.obf.IgnoreObf;
 import ru.vizzi.Utils.resouces.CoreAPI;
-
+@IgnoreObf
 public abstract class AbstractGuiScreenAdvanced extends GuiScreen {
     protected float minAspect;
 
@@ -40,6 +41,7 @@ public abstract class AbstractGuiScreenAdvanced extends GuiScreen {
     public AbstractGuiScreenAdvanced(float minAspect) {
         this.minAspect = minAspect;
         this.mc = Minecraft.getMinecraft();
+
     }
 
     @Override

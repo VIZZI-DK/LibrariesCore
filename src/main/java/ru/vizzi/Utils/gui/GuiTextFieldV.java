@@ -11,10 +11,12 @@ import net.minecraft.util.ChatAllowedCharacters;
 import ru.vizzi.Utils.CustomFont.FontContainer;
 import ru.vizzi.Utils.gui.drawmodule.GuiUtils;
 import ru.vizzi.Utils.gui.drawmodule.ScaleGui;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
 @SideOnly(Side.CLIENT)
 @Getter
 @Setter
+@IgnoreObf
 public class GuiTextFieldV extends Gui {
 	public float xPosition;
 	public float yPosition;

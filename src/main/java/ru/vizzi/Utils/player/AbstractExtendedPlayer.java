@@ -5,6 +5,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IExtendedEntityProperties;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
 public class AbstractExtendedPlayer implements IExtendedEntityProperties {
 	
@@ -29,6 +30,7 @@ public class AbstractExtendedPlayer implements IExtendedEntityProperties {
 	}
 
 	@Override
+	@IgnoreObf
 	public void loadNBTData(NBTTagCompound compound) {
 		// TODO Auto-generated method stub
 		

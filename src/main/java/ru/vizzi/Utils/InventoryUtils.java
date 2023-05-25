@@ -5,6 +5,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +13,7 @@ import java.util.Map;
 /**
  * @author Zloy_GreGan
  **/
-
+@IgnoreObf
 public class InventoryUtils {
 
     public int countItems(Item p_146029_1_, InventoryPlayer inventoryPlayer) {

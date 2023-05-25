@@ -1,12 +1,14 @@
 package ru.vizzi.Utils;
 
+import ru.vizzi.Utils.obf.IgnoreObf;
+
 import java.awt.*;
 import java.util.Random;
 
 /**
  * @author Zloy_GreGan
  */
-
+@IgnoreObf
 public class RandomUtils {
 
     private static Random rand;

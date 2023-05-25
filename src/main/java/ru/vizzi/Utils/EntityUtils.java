@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import ru.vizzi.Utils.obf.IgnoreObf;
 
 import javax.vecmath.Vector3d;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.List;
 /**
  * @author Zloy_GreGan
  */
-
+@IgnoreObf
 public class EntityUtils {
 
     public static int getDistanceToTheEntity(Entity start, Entity end) {

@@ -3,8 +3,12 @@ package ru.vizzi.Utils.resouces;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.SimpleTexture;
 import net.minecraft.util.ResourceLocation;
+import ru.vizzi.Utils.CustomFont.FontAPI;
+import ru.vizzi.Utils.CustomFont.FontContainer;
+import ru.vizzi.Utils.gui.drawmodule.GuiDrawUtils;
 import ru.vizzi.Utils.resouces.PNGTextureLoader.ImageSimpleData;
 
 import org.lwjgl.opengl.GL13;
@@ -29,6 +33,16 @@ public enum ResourceType {
             },
             (resourceLocation, o) -> TextureLoader.loadTexture(resourceLocation, ((PNGTextureLoader.ImageSimpleData) o))
     ),
+    TTF("ttf",
+            (field, resourceLocation) -> {
+                return null;
+            },
+            (resourceLocation, object) -> {
+                FontContainer font = FontAPI.getFontContainer(resourceLocation, 22);
+                GuiDrawUtils.drawStringNoScaleGui(font, "test", 0, 0, 2, 0xffffff);
+            }
+    ),
+
     /* DDS("dds",
             (field, resourceLocation) -> TextureLoaderDDS.loadDDSFile(resourceLocation),
             (resourceLocation, o) -> TextureLoaderDDS.loadTexture(((DDSFile) o), resourceLocation, new SimpleTexture(resourceLocation))

@@ -33,7 +33,7 @@ import ru.vizzi.Utils.resouces.TextureLoader;
 
 import javax.xml.crypto.Data;
 
-@IgnoreObf
+
 @Mod(modid = LibrariesCore.MODID, name = LibrariesCore.MODNAME, version = LibrariesCore.VERSION)
 public class LibrariesCore {
 
@@ -54,6 +54,7 @@ public class LibrariesCore {
 	
 
 	@EventHandler
+	@IgnoreObf
 	   public void preInit(FMLPreInitializationEvent event) {
 		LibrariesConfig config = LibrariesConfig.getInstance();
 		config.load();
@@ -116,6 +117,24 @@ public class LibrariesCore {
 			DatabaseManager.shutdown();
 		}
 	   }
+
+	public <T> ListenableFuture<T> runUsingMainClientThread(Runnable runnable) {
+		return (ListenableFuture<T>) Minecraft.getMinecraft().func_152344_a(runnable);
+	}
+
+	public <T> ListenableFuture<T> runUsingMainServerThread(Runnable runnable) {
+		return runUsingMainThreadServer(runnable);
+	}
+
+	@SuppressWarnings("unchecked")
+	public <T> ListenableFuture<T> runUsingMainClientThread(Callable<T> runnable) {
+		return (ListenableFuture<T>) Minecraft.getMinecraft().func_152343_a(runnable);
+
+	}
+
+	public <T> ListenableFuture<T> runUsingMainServerThread(Callable<T> runnable) {
+		return runUsingMainThreadServer(runnable);
+	}
 
 	@SuppressWarnings("unchecked")
     public <T> ListenableFuture<T> runUsingMainThread(Runnable runnable) {
