@@ -18,6 +18,8 @@ import javax.imageio.ImageIO;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
+import ru.vizzi.Utils.LibrariesConfig;
+import ru.vizzi.Utils.LibrariesCore;
 
 public class CoreAPI {
 	
@@ -31,7 +33,11 @@ public class CoreAPI {
     public static void init() {
         if(isInitialized) return;
         isInitialized = true;
+        if(LibrariesCore.librariesConfig.mcTextureLoc){
+            registerResourceLoader(new MinecraftResourcesLoader());
+        } else {
             registerResourceLoader(new ZipResourceLoader());
+        }
 
     }
 

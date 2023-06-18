@@ -7,7 +7,10 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.internal.Primitives;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import ru.vizzi.Utils.CommonUtils;
+import ru.vizzi.Utils.JsonUtils;
 import ru.vizzi.Utils.Logger;
 
 import java.io.*;
@@ -20,6 +23,8 @@ import java.util.*;
 public interface IConfigGson {
 
     Gson GSON = new GsonBuilder()
+            .registerTypeAdapter(ItemStack.class, JsonUtils.ITEM_STACK_TYPE_ADAPTER)
+            .registerTypeAdapter(NBTTagCompound.class, JsonUtils.nbtTagCompoundTypeAdapter)
             .setExclusionStrategies(new ExclusionStrategy() {
                 @Override
                 public boolean shouldSkipField(FieldAttributes f) {

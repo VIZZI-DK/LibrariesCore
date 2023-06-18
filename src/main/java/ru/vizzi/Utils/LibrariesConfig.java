@@ -21,6 +21,8 @@ public class LibrariesConfig implements IConfigGson {
 
     @Configurable
     public boolean DEBUG = false;
+    @Configurable
+    public boolean mcTextureLoc = false;
 
 
 

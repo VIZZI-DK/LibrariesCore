@@ -8,3 +8,9 @@ build
 proguard
 1.12.2
 1.12.2/.idea/modules/1.12.2.main.iml
+LibrariesCore.api.iml
+*.iml
+*.ipr
+*.iws
+LibrariesCore.ipr
+LibrariesCore.iws

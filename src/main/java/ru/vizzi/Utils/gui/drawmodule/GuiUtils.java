@@ -329,12 +329,37 @@ public class GuiUtils {
     }
     public static void drawItemStackIntoGUINew(ItemStack itemstack, float posX, float posY, double scale) {
         if (itemstack != null) {
-            glPushMatrix();
-            glEnable(2896);
-            glScaled(scale, scale, 0);
-            itemRendererNew.renderItemAndEffectIntoGUINew(Minecraft.getMinecraft().fontRenderer, Minecraft.getMinecraft().getTextureManager(), itemstack, (float) (posX / scale), (float) (posY / scale));
-            glDisable(2896);
-            glPopMatrix();
+            GL11.glPushMatrix();
+            GL11.glEnable((int) 3042);
+            OpenGlHelper.glBlendFunc((int) 770, (int) 771, (int) 1, (int) 0);
+            GL11.glDisable((int) 3008);
+            GL11.glPushMatrix();
+            GL11.glEnable((int) 2929);
+            GL11.glTranslated(0, 0, (double) 20.0);
+            //GL11.glScaled((double) 0.0625, (double) 0.0625, (double) 1.0);
+
+            GL11.glScaled((double) scale, scale, (double) 2.0);
+            GL11.glDisable((int) 2896);
+            itemRendererNew.renderItemAndEffectIntoGUI(Minecraft.getMinecraft().fontRenderer,
+                    Minecraft.getMinecraft().getTextureManager(), itemstack, (float) (posX / scale),
+                    (float) (posY / scale), false);
+            GL11.glEnable((int) 2896);
+            GL11.glDisable((int) 2929);
+            GL11.glEnable((int) 3042);
+            GL11.glAlphaFunc((int) 516, (float) 0.0f);
+            GL11.glPopMatrix();
+            GL11.glDisable((int) 2896);
+            GL11.glEnable((int) 3042);
+            GL11.glColor4f((float) 1.0f, (float) 1.0f, (float) 1.0f, (float) 1.0f);
+            GL11.glDisable((int) 2896);
+            GL11.glBlendFunc((int) 770, (int) 771);
+            GL11.glEnable((int) 3008);
+
+
+
+
+
+            GL11.glPopMatrix();
             
         }
     }

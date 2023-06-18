@@ -51,14 +51,16 @@ public class LibrariesCore {
 
 	private final Thread currentThread = Thread.currentThread();
 	private final Queue queue = Queues.newArrayDeque();
+
+	public static LibrariesConfig librariesConfig;
 	
 
 	@EventHandler
 	@IgnoreObf
 	   public void preInit(FMLPreInitializationEvent event) {
-		LibrariesConfig config = LibrariesConfig.getInstance();
-		config.load();
-		if(config.DEBUG){
+		librariesConfig = LibrariesConfig.getInstance();
+		librariesConfig.load();
+		if(librariesConfig.DEBUG){
 			logger.setDebug(true);
 		}
 

@@ -1,79 +1,64 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package ru.vizzi.Utils.CustomFont;
 
-import net.minecraft.client.Minecraft;
+import lombok.Getter;
+import lombok.Setter;
 import net.minecraft.util.ResourceLocation;
 
+@Getter
+@Setter
 public class FontContainer {
 
-    private StringCache textFont = null;
-    public boolean useCustomFont = true;
+    String fontName;
+    int fontSize;
+    ResourceLocation rs;
 
-    private FontContainer() {}
+    private FontContainer() {
+
+    }
 
     public FontContainer(String fontType, int fontSize) {
-        this(fontType, fontSize, null);
+        this(fontType, fontSize, (ResourceLocation)null);
     }
-    
+
     public FontContainer(String fontType, int fontSize, ResourceLocation resLoc) {
-        textFont = new StringCache();
-        textFont.setDefaultFont("Arial", fontSize, true);
-        useCustomFont = !fontType.equalsIgnoreCase("minecraft");
-        try {
-            if (!useCustomFont || fontType.isEmpty() || fontType.equalsIgnoreCase("default") || resLoc == null)
-            	textFont.setDefaultFont(fontType, fontSize, true);
-            else
-                textFont.setCustomFont(resLoc, fontSize, true);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        this.fontName = fontType;
+        this.fontSize = fontSize;
+        this.rs = resLoc;
+
     }
 
     public float height() {
-        if (useCustomFont)
-            return textFont.fontHeight;
-        return Minecraft.getMinecraft().fontRenderer.FONT_HEIGHT;
+        return TextRenderUtils.getTextHeight("", this);
+        // return this.useCustomFont ? this.textFont.fontHeight : (float)Minecraft.getMinecraft().fontRenderer.FONT_HEIGHT;
     }
 
     public float width(String text) {
-        if (useCustomFont)
-            return textFont.getStringWidth(text);
-        return Minecraft.getMinecraft().fontRenderer.getStringWidth(text);
+        return CustomFontRenderer.getStringWidth(this, text);
     }
 
-    public FontContainer copy() {
-        FontContainer font = new FontContainer();
-        font.textFont = textFont;
-        font.useCustomFont = useCustomFont;
-        return font;
-    }
 
-    public float drawStringWithShadow(String text, float x, float y, int color) {
-        float l;
-        if (useCustomFont) {
-            l = textFont.renderString(text, x+1, y+1, color, true);
-            l = Math.max(l, textFont.renderString(text, x, y, color, false));
-        } else {
-            l =  Minecraft.getMinecraft().fontRenderer.drawStringWithShadow(text, (int)x, (int)y, color);
-        }
-
-        return l;
-    }
+//    public float drawStringWithShadow(String text, float x, float y, int color) {
+//        float l;
+//        CustomFontRenderer.drawStringWithMaxWidth();
+//            l = this.textFont.renderString(text, x + 1.0F, y + 1.0F, color, true);
+//            l = Math.max(l, this.textFont.renderString(text, x, y, color, false));
+//
+//        return l;
+//    }
 
     public float drawString(String text, float x, float y, int color) {
-        if (useCustomFont) {
-            return textFont.renderString(text, x, y, color, false);
-        } else {
-            return Minecraft.getMinecraft().fontRenderer.drawStringWithShadow(text, (int)x, (int)y, color);
-        }
+        TextRenderUtils.drawText(x, y, color, text, this);
+        return x;
+
     }
 
     public String getName() {
-        if (!useCustomFont)
-            return "Minecraft";
-        return textFont.usedFont().getFontName();
+        return fontName;
     }
 
-    public StringCache getTextFont() {
-        return textFont;
-    }
 }
