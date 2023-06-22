@@ -10,8 +10,14 @@ import java.awt.Font;
 import java.awt.FontFormatException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import org.lwjgl.opengl.GL11;
@@ -22,6 +28,7 @@ import org.newdawn.slick.font.effects.ColorEffect;
 import ru.vizzi.Utils.eventhandler.RegistryEvent;
 import ru.vizzi.Utils.gui.drawmodule.ScaleGui;
 import ru.vizzi.Utils.resouces.CoreAPI;
+import scala.Char;
 
 @SideOnly(Side.CLIENT)
 @RegistryEvent
@@ -99,7 +106,7 @@ public class CustomFontRenderer {
         }
 
         int width = uf.getWidth(result.toString());
-        return (float)width / (1 * 2.0F);
+        return (float)width;
     }
 
     public static float getStringHeight(FontContainer font, String string, float w) {
@@ -155,8 +162,7 @@ public class CustomFontRenderer {
 
 
     public static void drawStringWithMaxWidth(String string, double x, double y, float w, int color, FontContainer font, EnumStringRenderType type) {
-        float guiScale = ScaleGui.get(1);
-
+        float guiScale = ScaleGui.get(1.0f);
         x = ((float)x * guiScale);
         y = ((float)y * guiScale);
 //        if (w != -1) {
@@ -166,39 +172,129 @@ public class CustomFontRenderer {
         GL11.glEnable((int)3042);
         GL11.glDisable((int)3553);
         GL11.glBlendFunc((int)770, (int)771);
-        if (!string.startsWith("§")) {
-            string = "§v" + string;
-        }
-        double sx = x;
-        int width = 0;
+//        if (!string.startsWith("§")) {
+//            string = "§v" + string;
+//        }
+//        double sx = x;
+//        int width = 0;
+//        UnicodeFont uf = CustomFontRenderer.get(font);
+//        for (String s1 : string.split("\n")) {
+//            if (s1 == null || s1.length() == 0) continue;
+//            String source = "";
+//            for (String s : s1.split("§")) {
+//                if (s == null || s.length() <= 1) continue;
+//                char col = s.charAt(0);
+//                for (String s2 : s.substring(1).split(" ")) {
+//                    String t = s2 + " ";
+//                    source = source + t;
+//                    if (w != -1 && ScaleGui.get(width) + ScaleGui.get(uf.getWidth(t)) > w) {
+//                        x = sx;
+//                        y += uf.getHeight(source) + 2;
+//                        width = 0;
+//                    }
+//                    uf.drawString((float) (x - (type == EnumStringRenderType.DEFAULT ? 0 : type == EnumStringRenderType.RIGHT ?
+//                            font.width(s) * ScaleGui.get(2) : font.width(s)  / 2f)), (float)y, t, CustomFontRenderer.getColor(col, color));
+//                    width += uf.getWidth(t);
+//                    x += uf.getWidth(t);
+//                }
+//            }
+//            x = sx;
+//            y += uf.getHeight(source) + 2;
+//            width = 0;
+//        }
         UnicodeFont uf = CustomFontRenderer.get(font);
-        for (String s1 : string.split("\n")) {
-            if (s1 == null || s1.length() == 0) continue;
-            String source = "";
-            for (String s : s1.split("§")) {
-                if (s == null || s.length() <= 1) continue;
-                char col = s.charAt(0);
-                for (String s2 : s.substring(1).split(" ")) {
-                    String t = s2 + " ";
-                    source = source + t;
-                    if (w != -1 && ScaleGui.get(width) + ScaleGui.get(uf.getWidth(t)) > w) {
-                        x = sx;
-                        y += uf.getHeight(source) + 2;
-                        width = 0;
-                    }
-                    uf.drawString((float) (x - (type == EnumStringRenderType.DEFAULT ? 0 : type == EnumStringRenderType.RIGHT ?
-                                                font.width(s) * ScaleGui.get(2) : font.width(s) * ScaleGui.get(2) / 2f)), (float)y, t, CustomFontRenderer.getColor(col, color));
-                    width += uf.getWidth(t);
-                    x += uf.getWidth(t);
-                }
+        float xCurrent = 0;
+
+        if(w == -1){
+            ArrayList<FontElement> fontElements = validateMinecraftColor(string, color);
+
+            for(FontElement fontElement : fontElements){
+                uf.drawString((float)x+xCurrent, (float)y, fontElement.string, fontElement.color);
+                xCurrent+=getStringWidth(font, fontElement.string);
             }
-            x = sx;
-            y += uf.getHeight(source) + 2;
-            width = 0;
+        } else {
+            ArrayList<String> strings = splitString(string, w, ScaleGui.get(333), font);
+            float yCurrent = 0;
+
+            for(String s : strings){
+                ArrayList<FontElement> fontElements = validateMinecraftColor(s, color);
+                xCurrent = 0;
+                for(FontElement fontElement : fontElements){
+                    uf.drawString((float)(x - (type == EnumStringRenderType.DEFAULT ? 0 : type == EnumStringRenderType.RIGHT ?
+                            font.width(s) : font.width(s)/2))+xCurrent, (float)y+yCurrent, fontElement.string, fontElement.color);
+                    yCurrent+=uf.getHeight(s) + 2;
+                    xCurrent+=getStringWidth(font, fontElement.string);
+                }
+
+            }
+
         }
+
         GL11.glEnable((int)3553);
         GL11.glDisable((int)3042);
         GL11.glScalef((float)guiScale, (float)guiScale, (float)1.0f);
+    }
+
+    public static ArrayList<FontElement> validateMinecraftColor(String s, int defaultColor){
+
+        Color color1 = new Color(defaultColor);
+        String drawString = "";
+        ArrayList<FontElement> drawStringMass = new ArrayList<>();
+        boolean nextColor = false;
+        for(int i = 0; i<s.length(); i++){
+            char c = s.charAt(i);
+            if(c != '§'){
+                if(nextColor){
+                    color1 = getColor(c, defaultColor);
+                    nextColor = false;
+                    continue;
+                }
+                drawString+=c;
+            } else {
+                nextColor = true;
+                drawStringMass.add(new FontElement(color1, drawString));
+                drawString="";
+            }
+        }
+        if(!drawString.isEmpty()){
+            drawStringMass.add(new FontElement(color1, drawString));
+        }
+        return drawStringMass;
+    }
+
+    public static ArrayList<String> splitString(String input, float maxWidth, float maxHeight, FontContainer font) {
+        ArrayList<String> splitStrings = new ArrayList<>();
+        float yCurrent = 0;
+        float wCurrent = 0;
+
+        String[] inputMas = input.split(" ");
+        UnicodeFont uf = CustomFontRenderer.get(font);
+        String element = "";
+
+        for(int i = 0; i < inputMas.length; i++){
+            String s;
+            if(i+1==inputMas.length){
+                s = inputMas[i]+"";
+            } else {
+                s = inputMas[i]+" ";
+            }
+            float widthM = ScaleGui.get(uf.getWidth(s));
+            if(wCurrent + widthM <= maxWidth){
+                wCurrent+=widthM;
+                element+=s;
+            } else {
+                splitStrings.add(element);
+                element = "";
+                wCurrent = 0;
+                wCurrent+=widthM;
+                element+=s;
+            }
+        }
+        if(wCurrent!=0){
+            splitStrings.add(element);
+        }
+
+        return splitStrings;
     }
 
     private static Color getColor(char s, int color) {
@@ -239,5 +335,15 @@ public class CustomFontRenderer {
 
     static {
         registerColors();
+    }
+
+    @AllArgsConstructor
+    @Getter
+    @Setter
+    public static class FontElement{
+
+        Color color;
+        String string;
+
     }
 }

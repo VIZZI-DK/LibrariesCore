@@ -152,7 +152,7 @@ public class GuiDrawUtils {
     public static void drawCenteredString(FontContainer fontType, String string, float x, float y, float scale, int color) {
         FontContainer fontContainer = fontType;
         scale = ScaleGui.get(scale);
-        drawStringNoScale(fontContainer, string, ScaleGui.get(x) - fontContainer.width(string) * scale / 2f, ScaleGui.get(y), scale, color);
+        drawStringNoScale(fontContainer, string, ScaleGui.get(x) - ScaleGui.get(fontContainer.width(string)) / 2f, ScaleGui.get(y), scale, color);
     }
 
     public static void drawStringNoXYScale(FontContainer fontType, String string, float x, float y, float scale, int color) {
@@ -163,23 +163,23 @@ public class GuiDrawUtils {
     public static void drawRightStringNoXYScale(FontContainer fontType, String string, float x, float y, float scale, int color) {
         FontContainer fontContainer = fontType;
         scale = ScaleGui.get(scale);
-        drawStringNoScale(fontContainer, string, x - fontContainer.width(string) * scale, y, scale, color);
+        drawStringNoScale(fontContainer, string, x - ScaleGui.get(fontContainer.width(string)), y, scale, color);
     }
 
     public static void drawCenteredStringNoXYScale(FontContainer fontType, String string, float x, float y, float scale, int color) {
         FontContainer fontContainer = fontType;
         scale = ScaleGui.get(scale);
-        drawStringNoScale(fontContainer, string, x - fontContainer.width(string) * scale / 2f, y, scale, color);
+        drawStringNoScale(fontContainer, string, x - ScaleGui.get(fontContainer.width(string)) / 2f, y, scale, color);
     }
 
     public static void drawCenteredStringCenterX(FontContainer fontContainer, String string, float x, float y, float scale, int color) {
         scale = ScaleGui.get(scale);
-        drawStringNoScale(fontContainer, string, ScaleGui.getCenterX(x) - fontContainer.width(string) * scale / 2f, ScaleGui.get(y), scale, color);
+        drawStringNoScale(fontContainer, string, ScaleGui.getCenterX(x) - ScaleGui.get(fontContainer.width(string))  / 2f, ScaleGui.get(y), scale, color);
     }
 
     public static void drawCenteredStringCenter(FontContainer fontContainer, String string, float x, float y, float scale, int color) {
         scale = ScaleGui.get(scale);
-        drawStringNoScale(fontContainer, string, ScaleGui.getCenterX(x) - fontContainer.width(string) * scale / 2f, ScaleGui.getCenterY(y), scale, color);
+        drawStringNoScale(fontContainer, string, ScaleGui.getCenterX(x) - ScaleGui.get(fontContainer.width(string)) / 2f, ScaleGui.getCenterY(y), scale, color);
     }
 
     public static void drawStringCenter(FontContainer fontType, String string, float x, float y, float scale, int color) {
@@ -196,12 +196,12 @@ public class GuiDrawUtils {
 
     public static void drawRightStringCenter(FontContainer fontContainer, String string, float x, float y, float scale, int color) {
         scale = ScaleGui.get(scale);
-        drawStringNoScale(fontContainer, string, ScaleGui.getCenterX(x) - fontContainer.width(string) * scale, ScaleGui.getCenterY(y), scale, color);
+        drawStringNoScale(fontContainer, string, ScaleGui.getCenterX(x) - ScaleGui.get(fontContainer.width(string)), ScaleGui.getCenterY(y), scale, color);
     }
 
     public static void drawRightString(FontContainer fontContainer, String string, float x, float y, float scale, int color) {
         scale = ScaleGui.get(scale);
-        drawStringNoScale(fontContainer, string, ScaleGui.get(x) - fontContainer.width(string) * scale, ScaleGui.get(y), scale, color);
+        drawStringNoScale(fontContainer, string, ScaleGui.get(x) - ScaleGui.get(fontContainer.width(string)), ScaleGui.get(y), scale, color);
     }
 
     public static void drawStringCenterXBot(FontContainer fontType, String string, float x, float y, float scale, int color) {
@@ -210,12 +210,12 @@ public class GuiDrawUtils {
 
     public static void drawRightStringCenterXBot(FontContainer fontContainer, String string, float x, float y, float scale, int color) {
         scale = ScaleGui.get(scale);
-        drawStringNoScale(fontContainer, string, ScaleGui.getCenterX(x) - fontContainer.width(string) * scale, ScaleGui.getBot(y), scale, color);
+        drawStringNoScale(fontContainer, string, ScaleGui.getCenterX(x) - ScaleGui.get(fontContainer.width(string)), ScaleGui.getBot(y), scale, color);
     }
 
     public static void drawRightStringRightBot(FontContainer fontContainer, String string, float x, float y, float scale, int color) {
         scale = ScaleGui.get(scale);
-        drawStringNoScale(fontContainer, string, ScaleGui.getRight(x) - fontContainer.width(string) * scale, ScaleGui.getBot(y), scale, color);
+        drawStringNoScale(fontContainer, string, ScaleGui.getRight(x) - ScaleGui.get(fontContainer.width(string)), ScaleGui.getBot(y), scale, color);
     }
 
     public static float drawSplittedStringCenter(FontContainer font, String text, float x, float y, float scale, float width, float heightLimit, int color, EnumStringRenderType renderType) {

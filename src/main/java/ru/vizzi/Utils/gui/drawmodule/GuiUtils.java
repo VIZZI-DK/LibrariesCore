@@ -354,11 +354,6 @@ public class GuiUtils {
             GL11.glDisable((int) 2896);
             GL11.glBlendFunc((int) 770, (int) 771);
             GL11.glEnable((int) 3008);
-
-
-
-
-
             GL11.glPopMatrix();
             
         }

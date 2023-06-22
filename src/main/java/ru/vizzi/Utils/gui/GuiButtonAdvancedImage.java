@@ -2,6 +2,7 @@ package ru.vizzi.Utils.gui;
 
 import ru.vizzi.Utils.gui.drawmodule.GuiDrawUtils;
 import ru.vizzi.Utils.gui.drawmodule.GuiUtils;
+import ru.vizzi.Utils.gui.drawmodule.ScaleGui;
 import ru.vizzi.Utils.obf.IgnoreObf;
 
 @IgnoreObf
@@ -81,7 +82,7 @@ public class GuiButtonAdvancedImage extends GuiButtonAdvanced {
 			
 			float paddingY = textScale * 4f;
 			GuiDrawUtils.drawStringNoScale(font, displayString,
-					this.xPosition+xText + this.width / 2.0f - font.width(displayString) * textScale / 2f,
+					this.xPosition+xText + this.width / 2.0f - ScaleGui.get(font.width(displayString)) / 2f,
 					this.yPosition + this.height / 2.0f - paddingY, textScale, color);
 
 		}

@@ -1,4 +1,4 @@
-package ru.vizzi.Utils;
+package ru.vizzi.Utils.math;
 
 import ru.vizzi.Utils.obf.IgnoreObf;
 

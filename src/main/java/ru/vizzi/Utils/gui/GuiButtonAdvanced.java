@@ -8,6 +8,7 @@ import ru.vizzi.Utils.CustomFont.FontContainer;
 import ru.vizzi.Utils.gui.drawmodule.AnimationHelper;
 import ru.vizzi.Utils.gui.drawmodule.GuiDrawUtils;
 import ru.vizzi.Utils.gui.drawmodule.GuiUtils;
+import ru.vizzi.Utils.gui.drawmodule.ScaleGui;
 import ru.vizzi.Utils.obf.IgnoreObf;
 
 @Getter
@@ -147,7 +148,7 @@ public class GuiButtonAdvanced extends GuiButtonNew {
 
 			float paddingY = 2 * 4f;
 			GuiDrawUtils.drawStringNoScale(font, displayString,
-					this.xPosition + this.width / 2.0f - font.width(displayString) * textScale / 2f,
+					this.xPosition + this.width / 2.0f - ScaleGui.get(font.width(displayString)) / 2f,
 					this.yPosition + this.height / 4.0f, textScale, color);
 
 		}

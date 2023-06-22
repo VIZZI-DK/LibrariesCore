@@ -1,4 +1,4 @@
-package ru.vizzi.Utils.Models;
+package ru.vizzi.Utils.model;
 
 import net.minecraftforge.client.model.IModelCustom;
 import net.minecraftforge.client.model.obj.GroupObject;
