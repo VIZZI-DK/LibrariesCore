@@ -161,7 +161,7 @@ public class CustomFontRenderer {
 
 
 
-    public static void drawStringWithMaxWidth(String string, double x, double y, float w, int color, FontContainer font, EnumStringRenderType type) {
+    public static void drawStringWithMaxWidth(String string, double x, double y, float width, int color, FontContainer font, EnumStringRenderType type) {
         float guiScale = ScaleGui.get(1.0f);
         x = ((float)x * guiScale);
         y = ((float)y * guiScale);
@@ -205,7 +205,7 @@ public class CustomFontRenderer {
         UnicodeFont uf = CustomFontRenderer.get(font);
         float xCurrent = 0;
 
-        if(w == -1){
+        if(width == -1){
             ArrayList<FontElement> fontElements = validateMinecraftColor(string, color);
 
             for(FontElement fontElement : fontElements){
@@ -213,7 +213,7 @@ public class CustomFontRenderer {
                 xCurrent+=getStringWidth(font, fontElement.string);
             }
         } else {
-            ArrayList<String> strings = splitString(string, w, ScaleGui.get(333), font);
+            ArrayList<String> strings = splitString(string, width, ScaleGui.get(111), font);
             float yCurrent = 0;
 
             for(String s : strings){
@@ -222,9 +222,9 @@ public class CustomFontRenderer {
                 for(FontElement fontElement : fontElements){
                     uf.drawString((float)(x - (type == EnumStringRenderType.DEFAULT ? 0 : type == EnumStringRenderType.RIGHT ?
                             font.width(s) : font.width(s)/2))+xCurrent, (float)y+yCurrent, fontElement.string, fontElement.color);
-                    yCurrent+=uf.getHeight(s) + 2;
                     xCurrent+=getStringWidth(font, fontElement.string);
                 }
+                yCurrent+=uf.getHeight(s) + 2;
 
             }
 
