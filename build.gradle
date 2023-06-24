@@ -43,6 +43,8 @@ jar {
         attributes 'FMLCorePlugin': 'ru.hooklib.example.ExampleHookLoader'
         attributes 'FMLCorePluginContainsFMLMod': 'true'
     }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from zipTree('buildlib.jar')
 }
 
 

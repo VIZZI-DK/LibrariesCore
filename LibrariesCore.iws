@@ -5,65 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e55d464f-cc28-483a-b492-fedd0e62e257" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/minecraft/client/renderer/RenderGlobal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/minecraft/client/renderer/WorldRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/math/MathRotateHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/math/QuaternionUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/MeshData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelEvents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Vao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Vbo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/VertexNM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/render/IReloadableRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/render/ReloadableRendererManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/AbstractResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/IResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceLoaderOBJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceLoadingState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceLocationStateful.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/BloomOverlayShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/BloomShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/BlurH.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/BlurV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/DownsampleFirstShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/DownsampleSecondShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/EnumShaderLightingType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/FinalShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ForwardDirectionalShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ForwardPointShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ForwardPointShaderOptimized.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/FrameBuffer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBuffer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferDirectionalShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferPointShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferShaderOld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferUnbindShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GameSettings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/KrogenitShaders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/PostProcessing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ShaderLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ShaderProgram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ShaderTextLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/UnsampleBloomShader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/resources/META-INF/core_at.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/1.12.2/src/main/resources/META-INF/core_at.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibrariesCore.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrariesCore.iws" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/GuiButtonAdvanced.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/GuiButtonAdvanced.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/CustomFontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/CustomFontRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/MathUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/math/MathUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/Models/ModelWrapperDisplayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelWrapperDisplayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonAdvanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonAdvanced.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonAdvancedImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonAdvancedImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiDrawUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiDrawUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

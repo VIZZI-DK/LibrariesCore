@@ -1,9 +1,5 @@
 package ru.vizzi.Utils.CustomFont;
 
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.TickEvent;
-import cpw.mods.fml.common.gameevent.TickEvent.Phase;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import java.awt.Font;
@@ -12,14 +8,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.ScaledResolution;
 import org.lwjgl.opengl.GL11;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.SlickException;
@@ -28,7 +21,6 @@ import org.newdawn.slick.font.effects.ColorEffect;
 import ru.vizzi.Utils.eventhandler.RegistryEvent;
 import ru.vizzi.Utils.gui.drawmodule.ScaleGui;
 import ru.vizzi.Utils.resouces.CoreAPI;
-import scala.Char;
 
 @SideOnly(Side.CLIENT)
 @RegistryEvent

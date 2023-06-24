@@ -97,23 +97,24 @@ public class GuiButtonAdvanced extends GuiButtonNew {
 					GuiDrawUtils.drawRoundedRect(xPosition, yPosition, width, height, rounted, colorBackground, 1.0);
 
 			}
-		}
 
-		if (texture != null) {
 
-			if (!enabled && textureDisable != null) {
-				GuiUtils.drawImageNew(textureDisable, xPosition, this.yPosition, this.width, this.height, 1.0);
-			} else if (isHovered() && textureHover != null && !active) {
-				GuiUtils.drawImageNew(textureHover, xPosition, this.yPosition, this.width, this.height, 1.0);
-			} else if (active && textureActive != null) {
-				GuiUtils.drawImageNew(textureActive, xPosition, this.yPosition, this.width, this.height, 1.0);
-			} else {
-				GuiUtils.drawImageNew(texture, xPosition, this.yPosition, this.width, this.height, 1.0);
+			if (texture != null) {
+
+				if (!enabled && textureDisable != null) {
+					GuiUtils.drawImageNew(textureDisable, xPosition, this.yPosition, this.width, this.height, 1.0);
+				} else if (isHovered() && textureHover != null && !active) {
+					GuiUtils.drawImageNew(textureHover, xPosition, this.yPosition, this.width, this.height, 1.0);
+				} else if (active && textureActive != null) {
+					GuiUtils.drawImageNew(textureActive, xPosition, this.yPosition, this.width, this.height, 1.0);
+				} else {
+					GuiUtils.drawImageNew(texture, xPosition, this.yPosition, this.width, this.height, 1.0);
+				}
+
 			}
 
+			drawText();
 		}
-
-		drawText();
 
 	}
 
