@@ -111,6 +111,9 @@ public class JsonUtils {
 					continue;
 				}
 				if(key.getValue().isJsonArray()){
+					if(key.getValue().getAsJsonArray().size() == 0){
+						continue;
+					}
 					if(key.getValue().getAsJsonArray().get(0).isJsonPrimitive() && key.getValue().getAsJsonArray().get(0).getAsJsonPrimitive().isNumber()){
 						Number number = key.getValue().getAsJsonArray().get(0).getAsJsonPrimitive().getAsNumber();
 						if(number instanceof Integer){
