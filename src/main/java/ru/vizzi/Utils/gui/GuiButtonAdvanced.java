@@ -147,7 +147,6 @@ public class GuiButtonAdvanced extends GuiButtonNew {
 				color = colorText;
 			}
 
-			float paddingY = 2 * 4f;
 			GuiDrawUtils.drawStringNoScale(font, displayString,
 					this.xPosition + this.width / 2.0f - ScaleGui.get(font.width(displayString)) / 2f,
 					this.yPosition + this.height / 4.0f, textScale, color);

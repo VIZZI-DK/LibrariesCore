@@ -189,7 +189,12 @@ public class JsonUtils {
 			if(value != null){
 				key = key.substring(0, key.length()-2);
 			} else {
-				value = readJsonValue(reader);
+				value = isJsonArray(key, reader);
+				if(value != null){
+
+				} else {
+					value = readJsonValue(reader);
+				}
 			}
 			jsonObject.add(key, value);
 		}
@@ -222,7 +227,11 @@ public class JsonUtils {
 			return new JsonPrimitive(Byte.parseByte(reader.nextString()));
 		} else if (key.endsWith("@s")) {
 			return new JsonPrimitive(Short.parseShort(reader.nextString()));
-		} else if (key.endsWith("@I")) {
+		}
+		return null;
+	}
+	public static JsonElement isJsonArray(String key, JsonReader reader) throws IOException {
+		if (key.endsWith("@I")) {
 			reader.beginArray();
 			JsonArray jsonArray = new JsonArray();
 			while(reader.hasNext()){
