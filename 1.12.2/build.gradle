@@ -1,0 +1,81 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = "forge"
+            url = "https://maven.minecraftforge.net/"
+        }       
+		maven {
+            name = "github"
+            url = "https://github.com/juanmuscaria/maven/raw/master"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle2:[2.3-1.0.0-SNAPSHOT,)'
+    }
+}
+
+repositories {
+	flatDir {
+		dirs 'deps'
+	}
+}
+
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+version = mod_version
+group = mod_group
+archivesBaseName = mod_archives_name
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
+
+minecraft {
+	version = "1.12.2-14.23.5.2847"
+    mappings = "stable_39"
+	runDir = "eclipse"
+    
+	replace '@VERSION@', project.version
+	// makeObfSourceJar = false
+}
+
+
+dependencies {
+       implementation group: 'org.reflections', name: 'reflections', version: '0.9.12'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+    compile fileTree(include: ['*.jar'], dir: 'lib')
+}
+
+jar {
+    manifest {
+        attributes 'FMLCorePlugin': 'ru.vizzi.alamine.hooks.HookLoaderCore'
+        attributes 'FMLCorePluginContainsFMLMod': 'true'
+        attributes 'FMLAT': 'core_at.cfg'
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from zipTree('buildlib.jar')
+}
+
+task devJar(type: Jar) {
+	classifier = 'dev'
+	from sourceSets.main.output
+    manifest {
+        attributes 'FMLCorePlugin': 'ru.hooklib.example.ExampleHookLoader'
+        attributes 'FMLCorePluginContainsFMLMod': 'true'
+        attributes 'FMLAT': 'core_at.cfg'
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from zipTree('buildlib.jar')
+}
+
+task sourcesJar(type: Jar) {
+	classifier = 'sources'
+	from sourceSets.main.allSource
+}
+
+artifacts {
+	archives devJar
+	archives sourcesJar
+}
