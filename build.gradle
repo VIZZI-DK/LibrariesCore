@@ -64,6 +64,13 @@ tasks.withType(JavaCompile){
 task devJar(type: Jar) {
     classifier = 'dev'
     from sourceSets.main.output
+    manifest {
+        attributes 'FMLAT': 'example_at.cfg'
+        attributes 'FMLCorePlugin': 'ru.hooklib.example.ExampleHookLoader'
+        attributes 'FMLCorePluginContainsFMLMod': 'true'
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from zipTree('buildlib.jar')
 }
 
 task sourcesJar(type: Jar) {
