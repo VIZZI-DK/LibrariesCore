@@ -81,6 +81,9 @@ public class CustomFontRenderer {
     }
 
     public static float getStringWidth(FontContainer font, String string) {
+        if(font == null || string == null){
+            return  0;
+        }
         if (!string.startsWith("§")) {
             string = "§f" + string;
         }
@@ -102,6 +105,9 @@ public class CustomFontRenderer {
     }
 
     public static float getStringHeight(FontContainer font, String string, float w) {
+        if(font == null || string == null){
+            return  0;
+        }
         if (!string.startsWith("§")) {
             string = "§f" + string;
         }
@@ -154,6 +160,9 @@ public class CustomFontRenderer {
 
 
     public static void drawStringWithMaxWidth(String string, double x, double y, float width, int color, FontContainer font, EnumStringRenderType type) {
+        if(font == null || string == null){
+            return;
+        }
         float guiScale = ScaleGui.get(1.0f);
         x = ((float)x * guiScale);
         y = ((float)y * guiScale);
