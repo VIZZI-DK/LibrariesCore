@@ -66,25 +66,4 @@ public class GuiButtonAdvancedImage extends GuiButtonAdvanced {
 
 	}
 
-    protected void drawText() {
-		int color = -1;
-		if (colorText != -1) {
-
-			if (!enabled) {
-				color = colorTextDisable;
-			} else if (isHovered() && !active) {
-				color = colorTextHover;
-			} else if (active) {
-				color = colorTextActive;
-			} else {
-				color = colorText;
-			}
-			
-			float paddingY = textScale * 4f;
-			GuiDrawUtils.drawStringNoScale(font, displayString,
-					this.xPosition+xText + this.width / 2.0f - ScaleGui.get(font.width(displayString)) / 2f,
-					this.yPosition + this.height / 2.0f - paddingY, textScale, color);
-
-		}
-	}
 }

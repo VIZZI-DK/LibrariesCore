@@ -148,7 +148,7 @@ public class GuiButtonAdvanced extends GuiButtonNew {
 			}
 
 			GuiDrawUtils.drawStringNoScale(font, displayString,
-					this.xPosition + this.width / 2.0f - ScaleGui.get(font.width(displayString)) / 2f,
+					this.xPosition + this.width / 2.0f - font.width(displayString) / 2f,
 					this.yPosition + this.height / 4.0f, textScale, color);
 
 		}

@@ -163,13 +163,12 @@ public class CustomFontRenderer {
         if(font == null || string == null){
             return;
         }
-        float guiScale = ScaleGui.get(1.0f);
-        x = ((float)x * guiScale);
-        y = ((float)y * guiScale);
+        x = ((float)x * 1);
+        y = ((float)y * 1);
 //        if (w != -1) {
 //            w = ((float)w * guiScale);
 //        }
-        GL11.glScalef((float)guiScale, (float)guiScale, (float)1.0f);
+        GL11.glScalef((float)1, (float)1, (float)1.0f);
         GL11.glEnable((int)3042);
         GL11.glDisable((int)3553);
         GL11.glBlendFunc((int)770, (int)771);
@@ -233,7 +232,7 @@ public class CustomFontRenderer {
 
         GL11.glEnable((int)3553);
         GL11.glDisable((int)3042);
-        GL11.glScalef((float)guiScale, (float)guiScale, (float)1.0f);
+        GL11.glScalef((float)1, (float)1, (float)1.0f);
     }
 
     public static ArrayList<FontElement> validateMinecraftColor(String s, int defaultColor){
@@ -279,7 +278,7 @@ public class CustomFontRenderer {
             } else {
                 s = inputMas[i]+" ";
             }
-            float widthM = ScaleGui.get(uf.getWidth(s));
+            float widthM = uf.getWidth(s);
             if(wCurrent + widthM <= maxWidth){
                 wCurrent+=widthM;
                 element+=s;
