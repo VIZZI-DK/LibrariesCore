@@ -8,16 +8,23 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import net.minecraft.client.Minecraft;
+import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.UnicodeFont;
 import org.newdawn.slick.font.effects.ColorEffect;
+import ru.vizzi.Utils.LibrariesCore;
 import ru.vizzi.Utils.eventhandler.RegistryEvent;
 import ru.vizzi.Utils.gui.drawmodule.ScaleGui;
 import ru.vizzi.Utils.resouces.CoreAPI;
@@ -27,57 +34,76 @@ import ru.vizzi.Utils.resouces.CoreAPI;
 public class CustomFontRenderer {
     private static final Map<String, UnicodeFont> cache = new HashMap();
     private static final Map<String, Color> colors = new HashMap();
+
+    private static HashSet<String> loading = new HashSet<>();
+
+    private static ExecutorService executorService;
+
+    // public static final ResourceLocation pixelTexture = new ResourceLocation(LibrariesCore.MODID, "textures/gui/pixel.png");
     //    public static int guiScale;
 //    static float fontScale;
     private static String symbols = " +=0123456789абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!-_()?,./\"'[]{}*&^:%$;№@#~`><•";
 
     public CustomFontRenderer() {
+
+        if(executorService == null){
+            executorService = Executors.newFixedThreadPool(4);
+        }
+
+    }
+
+
+    private static CompletableFuture<UnicodeFont> getAsync(FontContainer font){
+        if(loading.contains(font.fontName+font.fontSize)){
+            return null;
+        } else {
+            loading.add(font.fontName+font.fontSize);
+            return CompletableFuture.supplyAsync(()->{
+                try{
+
+                    InputStream in = CoreAPI.getInputStreamFromZip(font.rs);
+                    Font fontBase = Font.createFont(0, in);
+                    in.close();
+                    UnicodeFont unicodeFont = new UnicodeFont(fontBase, font.fontSize, false, false);
+                    unicodeFont.getEffects().add(new ColorEffect(java.awt.Color.WHITE));
+                    unicodeFont.addGlyphs(symbols);
+                    unicodeFont.setDisplayListCaching(true);
+                    return unicodeFont;
+                } catch (Exception e){
+                    e.printStackTrace();
+
+                }
+                return null;
+            }, executorService);
+        }
     }
 
     private static UnicodeFont get(FontContainer font) {
-        int size = (int)((float)font.fontSize * 1);
-        return (UnicodeFont)cache.computeIfAbsent(font.fontName + size, (o) -> {
-            Font s;
-            try {
-                InputStream in = CoreAPI.getInputStreamFromZip(font.rs);
-                Throwable var5 = null;
-
-                try {
-                    s = Font.createFont(0, in);
-                } catch (Throwable var17) {
-                    var5 = var17;
-                    throw var17;
-                } finally {
-                    if (in != null) {
-                        if (var5 != null) {
-                            try {
-                                in.close();
-                            } catch (Throwable var15) {
-                                var5.addSuppressed(var15);
+        String name = font.fontName+font.fontSize;
+        if(cache.containsKey(name)){
+            return cache.get(name);
+        } else {
+            CompletableFuture<UnicodeFont> completableFuture = getAsync(font);
+            if(completableFuture != null){
+                completableFuture.handle((data, error) ->{
+                    if(error != null){
+                        error.printStackTrace();
+                    } else if(data != null){
+                        LibrariesCore.instance.runUsingMainClientThread(()->{
+                            try{
+                                data.loadGlyphs();
+                                loading.remove(name);
+                                cache.put(name, data);
+                            } catch (Exception e){
+                                e.printStackTrace();
                             }
-                        } else {
-                            in.close();
-                        }
+                        });
                     }
-
-                }
-            } catch (IOException | FontFormatException var19) {
-                throw new RuntimeException(font.fontName, var19);
+                    return null;
+                });
             }
-
-            UnicodeFont uf = new UnicodeFont(s, size, false, false);
-            uf.getEffects().add(new ColorEffect(java.awt.Color.WHITE));
-            uf.addGlyphs(symbols);
-
-            try {
-                uf.loadGlyphs();
-            } catch (SlickException var16) {
-                throw new RuntimeException(font.fontName, var16);
-            }
-
-            uf.setDisplayListCaching(true);
-            return uf;
-        });
+        }
+        return null;
     }
 
     public static float getStringWidth(FontContainer font, String string) {
@@ -89,6 +115,9 @@ public class CustomFontRenderer {
         }
 
         UnicodeFont uf = get(font);
+        if(uf == null){
+            return 0;
+        }
         StringBuilder result = new StringBuilder();
         String[] var4 = string.split("§");
         int var5 = var4.length;
@@ -119,6 +148,9 @@ public class CustomFontRenderer {
         float y = 0.0F;
         float width = 0.0F;
         UnicodeFont uf = get(font);
+        if(uf == null){
+            return 0;
+        }
         String[] var6 = string.split("\n");
         int var7 = var6.length;
 
@@ -168,6 +200,10 @@ public class CustomFontRenderer {
 //        if (w != -1) {
 //            w = ((float)w * guiScale);
 //        }
+        UnicodeFont uf = CustomFontRenderer.get(font);
+        if(uf == null){
+            return;
+        }
         GL11.glScalef((float)1, (float)1, (float)1.0f);
         GL11.glEnable((int)3042);
         GL11.glDisable((int)3553);
@@ -202,7 +238,7 @@ public class CustomFontRenderer {
 //            y += uf.getHeight(source) + 2;
 //            width = 0;
 //        }
-        UnicodeFont uf = CustomFontRenderer.get(font);
+
         float xCurrent = 0;
 
         if(width == -1){
@@ -213,7 +249,7 @@ public class CustomFontRenderer {
                 xCurrent+=getStringWidth(font, fontElement.string);
             }
         } else {
-            ArrayList<String> strings = splitString(string, width, ScaleGui.get(111), font);
+            ArrayList<String> strings = splitString(string, width, ScaleGui.get(111), uf);
             float yCurrent = 0;
 
             for(String s : strings){
@@ -229,7 +265,7 @@ public class CustomFontRenderer {
             }
 
         }
-
+        //Minecraft.getMinecraft().renderEngine.bindTexture(pixelTexture);
         GL11.glEnable((int)3553);
         GL11.glDisable((int)3042);
         GL11.glScalef((float)1, (float)1, (float)1.0f);
@@ -262,13 +298,12 @@ public class CustomFontRenderer {
         return drawStringMass;
     }
 
-    public static ArrayList<String> splitString(String input, float maxWidth, float maxHeight, FontContainer font) {
+    public static ArrayList<String> splitString(String input, float maxWidth, float maxHeight, UnicodeFont uf) {
         ArrayList<String> splitStrings = new ArrayList<>();
         float yCurrent = 0;
         float wCurrent = 0;
 
         String[] inputMas = input.split(" ");
-        UnicodeFont uf = CustomFontRenderer.get(font);
         String element = "";
 
         for(int i = 0; i < inputMas.length; i++){

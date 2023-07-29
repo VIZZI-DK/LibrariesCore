@@ -33,6 +33,8 @@ import ru.vizzi.Utils.resouces.CoreAPI;
 public abstract class AbstractGuiScreenAdvanced extends GuiScreen {
     protected float minAspect;
 
+    boolean defaultScale = false;
+
     public AbstractGuiScreenAdvanced() {
         this.minAspect = ScaleGui.FULL_HD;
         this.mc = Minecraft.getMinecraft();
@@ -54,9 +56,15 @@ public abstract class AbstractGuiScreenAdvanced extends GuiScreen {
     @Override
     public void initGui() {
         ScaleGui.update(minAspect);
-		CoreAPI.isDefaultScale = false;
+        if(!defaultScale) {
+            CoreAPI.isDefaultScale = false;
+        }
         this.width = mc.displayWidth;
         this.height = mc.displayHeight;
+    }
+
+    public void setDefaultScale(){
+        defaultScale = true;
     }
 
     @Override
