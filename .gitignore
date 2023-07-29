@@ -12,3 +12,8 @@ LibrariesCore.api.iml
 *.iws
 LibrariesCore.ipr
 LibrariesCore.iws
+out/
+1.16.5
+src/main/java/ru/vizzi/Utils/test
+src/main/resources/assets/librariescore/shaders
+src/main/java/ru/vizzi/Utils/shader

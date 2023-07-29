@@ -30,47 +30,12 @@ public class Model extends AbstractResource {
     @Setter @Getter private Vector3f min, max;
     @Getter private float invScale;
 
-    protected static final FloatBuffer matrix = BufferUtils.createFloatBuffer(16);
 
     public Model(ResourceLocation resourceLocation) {
         super(resourceLocation);
         this.path = resourceLocation.toString();
     }
 
-    protected void setMatrix(int location, FloatBuffer matrix) {
-        GL20.glUniformMatrix4(location, false, matrix);
-    }
-
-
-    public void renderPart(String name, IPBR shader) {
-        resetLifeTime();
-        if(isLoaded()) {
-            Vao vao = partByName.get(name);
-            if (vao != null) {
-                shader.setViewMatrix();
-                vao.bindAttribs();
-                GL11.glDrawElements(GL11.GL_TRIANGLES, vao.getIndexCount(), GL11.GL_UNSIGNED_INT, 0);
-                vao.unbindAttribs();
-            }
-        } else {
-            ResourceManager.loadResource(this);
-        }
-    }
-
-
-    public void render(IPBR shader) {
-        resetLifeTime();
-        if(isLoaded()) {
-            shader.setViewMatrix();
-            for (Vao vao : vaos) {
-                vao.bindAttribs();
-                GL11.glDrawElements(GL11.GL_TRIANGLES, vao.getIndexCount(), GL11.GL_UNSIGNED_INT, 0);
-                vao.unbindAttribs();
-            }
-        } else {
-            ResourceManager.loadResource(this);
-        }
-    }
 
 
 
@@ -80,7 +45,6 @@ public class Model extends AbstractResource {
         if(isLoaded()) {
             Vao vao = partByName.get(name);
             if (vao != null) {
-                //setViewMatrix();
                 vao.bindAttribs();
                 GL11.glDrawElements(GL11.GL_TRIANGLES, vao.getIndexCount(), GL11.GL_UNSIGNED_INT, 0);
                 vao.unbindAttribs();
@@ -94,7 +58,6 @@ public class Model extends AbstractResource {
         resetLifeTime();
         if(isLoaded()) {
             for (Vao vao : vaos) {
-                //setViewMatrix();
                 vao.bindAttribs();
                 GL11.glDrawElements(GL11.GL_TRIANGLES, vao.getIndexCount(), GL11.GL_UNSIGNED_INT, 0);
                 vao.unbindAttribs();

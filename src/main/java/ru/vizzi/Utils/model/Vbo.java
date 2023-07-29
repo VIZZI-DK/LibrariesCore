@@ -60,7 +60,8 @@ public class Vbo {
 
     void vertexAttribPointer(int attribute, int attrSize, int BYTES_PER_FLOAT) {
         this.attribute = attribute;
-        GL20.glVertexAttribPointer(attribute, attrSize, GL11.GL_FLOAT, false, attrSize * BYTES_PER_FLOAT, 0);
+        GL11.glEnableClientState(GL11.GL_VERTEX_ARRAY);
+        GL11.glVertexPointer(attrSize, GL11.GL_FLOAT, attrSize * BYTES_PER_FLOAT, 0);
     }
 
     public int getAttribute() {

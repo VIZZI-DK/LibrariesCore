@@ -33,6 +33,9 @@ import ru.vizzi.Utils.obf.IgnoreObf;
 import ru.vizzi.Utils.resouces.CoreAPI;
 import ru.vizzi.Utils.resouces.PreLoadableResourceManager;
 import ru.vizzi.Utils.resouces.TextureLoader;
+import ru.vizzi.Utils.test.BlockTest;
+import ru.vizzi.Utils.test.RenderTest;
+import ru.vizzi.Utils.test.TileTest;
 
 import javax.xml.crypto.Data;
 
@@ -72,7 +75,7 @@ public class LibrariesCore {
 	    	  textureLoader = new TextureLoader();
 	    	  CoreAPI.init();
 
-
+			 // ClientRegistry.bindTileEntitySpecialRenderer(TileTest.class, new RenderTest());
 
 	      };
 		EventLoader eventLoader = new EventLoader();
@@ -83,6 +86,8 @@ public class LibrariesCore {
 	@EventHandler
 	   public void Init(FMLInitializationEvent event) {
 
+		//BlockTest blockTest = new BlockTest(Material.anvil);
+		//GameRegistry.registerTileEntity(TileTest.class, "tiletestvizzi");
 	
 	   }
 	@EventHandler
