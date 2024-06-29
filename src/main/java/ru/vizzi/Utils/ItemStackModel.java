@@ -7,7 +7,6 @@ import ru.justagod.cutter.GradleSideOnly;
 import ru.vizzi.Utils.config.Configurable;
 
 @Data
-@GradleSideOnly(GradleSide.SERVER)
 @Configurable
 public class ItemStackModel {
     private final String name;

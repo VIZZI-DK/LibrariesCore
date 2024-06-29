@@ -2,6 +2,8 @@ package ru.vizzi.Utils.gui;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import lombok.Getter;
+import lombok.Setter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.client.audio.SoundHandler;
@@ -54,6 +56,7 @@ public class GuiButtonNew extends Gui
         this.height = p_i1021_5_;
         this.displayString = p_i1021_6_;
     }
+
 
     /**
      * Returns 0 if the button is disabled, 1 if the mouse is NOT hovering over this button and 2 if it IS hovering over

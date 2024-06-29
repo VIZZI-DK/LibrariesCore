@@ -12,7 +12,6 @@ public class FontAPI {
 
     @SneakyThrows
     public static FontContainer getFontContainer(ResourceLocation rs, int size){
-        size = (int) ScaleGui.get(size);
         if(fontsCache.containsKey(rs)){
             if(fontsCache.get(rs).containsKey(size)){
                 return fontsCache.get(rs).get(size);

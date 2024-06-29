@@ -9,16 +9,13 @@ import net.minecraft.util.ResourceLocation;
 
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import javax.imageio.ImageIO;
 
-import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
-import ru.vizzi.Utils.LibrariesConfig;
 import ru.vizzi.Utils.LibrariesCore;
 
 public class CoreAPI {

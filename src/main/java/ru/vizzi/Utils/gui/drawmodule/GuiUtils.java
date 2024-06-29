@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.Display;
 import ru.vizzi.Utils.obf.IgnoreObf;
 import ru.vizzi.Utils.resouces.CoreAPI;
 import ru.vizzi.Utils.resouces.PreLoadableResource;
@@ -315,6 +316,18 @@ public class GuiUtils {
         glEnable(3089);
         GL11.glScissor(posX, posY, endX, endY);
     }
+
+
+    public static void glScissorNew(int posX, int posY, int endX, int endY, boolean test) {
+        if (test) {
+            GuiUtils.drawRectS((double)posX, (double)posY, (double)endX, (double)endY, 16777215, 0.3);
+        }
+
+        GL11.glEnable(3089);
+        GL11.glScissor(posX, Display.getHeight() - (posY + endY), endX, endY);
+        // GL11.glScissor(posX, posY, endX, endY);
+    }
+
 
     public static void drawItemStackIntoGUI(ItemStack itemstack, int posX, int posY, double scale) {
         if (itemstack != null) {

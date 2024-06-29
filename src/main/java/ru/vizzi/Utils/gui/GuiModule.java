@@ -1,19 +1,27 @@
 package ru.vizzi.Utils.gui;
 
 import lombok.Getter;
+import lombok.Setter;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.monster.EntityZombie;
 import ru.vizzi.Utils.obf.IgnoreObf;
 
 @IgnoreObf
 public class GuiModule extends GuiExtended {
 
 	@Getter
-    private int widthTemp, heightTemp, x, y;
+    @Setter
+    private float widthTemp, heightTemp, x, y;
+
 
     private boolean isActive;
+    @Setter
+    @Getter
+    private boolean focused;
 
-    public GuiModule(GuiScreen parent, int x, int y, int width, int height) {
+    public GuiModule(GuiScreen parent, float x, float y, float width, float height) {
         super(parent);
         this.widthTemp = width;
         this.heightTemp = height;
@@ -21,7 +29,7 @@ public class GuiModule extends GuiExtended {
         this.y = y;
     }
 
-    public GuiModule(int width, int height) {
+    public GuiModule(float width, float height) {
         this.widthTemp = width;
         this.heightTemp = height;
     }
@@ -29,8 +37,21 @@ public class GuiModule extends GuiExtended {
     @Override
     public void initGui() {
         super.initGui();
-        width = widthTemp;
-        height = heightTemp;
+        width = mc.displayWidth;
+        height = mc.displayHeight;
+    }
+
+    public boolean isGuiFocused(){
+        boolean foc = focused;
+        if(!foc){
+            for(GuiModule guiModule : modules){
+                if(guiModule.isActive() && guiModule.focused){
+                    foc = true;
+                    break;
+                }
+            }
+        }
+        return foc;
     }
 
     @Override

@@ -26,6 +26,7 @@ import net.minecraft.client.gui.GuiLabel;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.Tessellator;
+import ru.vizzi.Utils.ClientEvent;
 import ru.vizzi.Utils.gui.drawmodule.ScaleGui;
 import ru.vizzi.Utils.obf.IgnoreObf;
 import ru.vizzi.Utils.resouces.CoreAPI;
@@ -55,7 +56,7 @@ public abstract class AbstractGuiScreenAdvanced extends GuiScreen {
 
     @Override
     public void initGui() {
-        ScaleGui.update(minAspect);
+        ClientEvent.resize();
         if(!defaultScale) {
             CoreAPI.isDefaultScale = false;
         }

@@ -20,6 +20,7 @@ public class EventLoader {
     public void onPreInit(FMLPreInitializationEvent event) {
         for (final ASMDataTable.ASMData data : event.getAsmData().getAll(RegistryEvent.class.getName())) {
             try {
+                LibrariesCore.logger.debug("Class event: %s", data.getClassName());
                 final Object obj = Class.forName(data.getClassName()).newInstance();
                 boolean hasOreGenEvent = false;
                 boolean hasTerrainGenEvent = false;

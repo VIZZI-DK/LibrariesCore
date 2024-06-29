@@ -11,7 +11,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 @UtilityClass
-@GradleSideOnly(GradleSide.SERVER)
 public class ItemStackFactory {
 
     @Nullable

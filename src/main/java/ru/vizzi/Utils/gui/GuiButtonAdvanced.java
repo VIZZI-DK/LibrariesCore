@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
+import ru.vizzi.Utils.CustomFont.CustomFontRenderer;
 import ru.vizzi.Utils.CustomFont.FontContainer;
 import ru.vizzi.Utils.gui.drawmodule.AnimationHelper;
 import ru.vizzi.Utils.gui.drawmodule.GuiDrawUtils;
@@ -55,6 +56,14 @@ public class GuiButtonAdvanced extends GuiButtonNew {
 		this.heightBase = height;
 		this.textScale = textScale;
 	}
+	@Getter
+	@Setter
+	protected IPressable onPress;
+
+	public interface IPressable {
+		void onPress(GuiButtonAdvanced guiButtonAdvanced);
+	}
+
 
 	@Override
 	public void drawButton(Minecraft mc, int mouseX, int mouseY) {
@@ -146,10 +155,11 @@ public class GuiButtonAdvanced extends GuiButtonNew {
 			} else {
 				color = colorText;
 			}
-
-			GuiDrawUtils.drawStringNoScale(font, displayString,
-					this.xPosition + this.width / 2.0f - font.width(displayString) / 2f,
-					this.yPosition + this.height / 4.0f, textScale, color);
+			if(font != null) {
+				float height = CustomFontRenderer.getStringHeight(font, displayString, -1);
+				//  System.out.println();
+				GuiDrawUtils.drawStringNoScale(font, displayString, this.xPosition + this.width / 2.0f - font.width(displayString) / 2f, this.yPosition + this.height / 2.0F - height , textScale, color);
+			}
 
 		}
 	}

@@ -28,15 +28,9 @@ import ru.justagod.cutter.GradleSide;
 import ru.justagod.cutter.GradleSideOnly;
 import ru.vizzi.Utils.databases.DatabaseManager;
 import ru.vizzi.Utils.eventhandler.EventLoader;
-import ru.vizzi.Utils.eventhandler.RegistryEvent;
 import ru.vizzi.Utils.obf.IgnoreObf;
 import ru.vizzi.Utils.resouces.CoreAPI;
-import ru.vizzi.Utils.resouces.PreLoadableResourceManager;
 import ru.vizzi.Utils.resouces.TextureLoader;
-import ru.vizzi.Utils.test.BlockTest;
-import ru.vizzi.Utils.test.RenderTest;
-import ru.vizzi.Utils.test.TileTest;
-
 import javax.xml.crypto.Data;
 
 
@@ -64,6 +58,9 @@ public class LibrariesCore {
 	@EventHandler
 	@IgnoreObf
 	   public void preInit(FMLPreInitializationEvent event) {
+
+	//	MainDecryptor mainDecryptor = new MainDecryptor();
+
 		librariesConfig = LibrariesConfig.getInstance();
 		librariesConfig.load();
 		if(librariesConfig.DEBUG){

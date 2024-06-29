@@ -8,6 +8,7 @@ package ru.vizzi.Utils.CustomFont;
 import lombok.Getter;
 import lombok.Setter;
 import net.minecraft.util.ResourceLocation;
+import ru.vizzi.Utils.gui.drawmodule.ScaleGui;
 
 @Getter
 @Setter
@@ -32,8 +33,8 @@ public class FontContainer {
 
     }
 
-    public float height() {
-        return TextRenderUtils.getTextHeight("", this);
+    public float height(String text) {
+        return TextRenderUtils.getTextHeight(text, this);
         // return this.useCustomFont ? this.textFont.fontHeight : (float)Minecraft.getMinecraft().fontRenderer.FONT_HEIGHT;
     }
 
@@ -55,6 +56,10 @@ public class FontContainer {
         TextRenderUtils.drawText(x, y, color, text, this);
         return x;
 
+    }
+
+    public int getScaledSize() {
+        return ScaleGui.get(fontSize);
     }
 
     public String getName() {

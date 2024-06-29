@@ -1,4 +1,11 @@
 import proguard.gradle.ProGuardTask
+
+import javax.crypto.Cipher
+import javax.crypto.spec.SecretKeySpec
+import java.util.zip.ZipEntry
+import java.util.zip.ZipFile
+import java.util.zip.ZipOutputStream
+
 buildscript {
     repositories {
         mavenCentral()
@@ -80,7 +87,7 @@ task sourcesJar(type: Jar) {
 
 artifacts {
     archives devJar
-    //archives sourcesJar
+    archives sourcesJar
 }
 
 task proGuardObfuscate(type: ProGuardTask) {
@@ -180,5 +187,82 @@ task zipALLProject(type: Zip) {
         from "$projectDir/proguard/obfuscate_mappings.txt"
     }
 
+    byte[] encodeKey = "zGJtHGNHkFD6zST5+HbQnA==".getBytes()
 
+    task encodeResources {
+        doLast {
+            String targetDir = buildDir.getAbsolutePath() + "/temp"
+            String outDir = "output"
+            List<String> exclusions = new ArrayList<>()
+            exclusions.addAll([
+                    "default_resources.zip"
+            ])
+//        byte[] clientKeyEnc = Base64.getEncoder().encode(encodeKey)
+            byte[] clientKeyEnc = encodeKey
+            Cipher cipher = Cipher.getInstance("AES")
+            cipher.init(Cipher.ENCRYPT_MODE, new SecretKeySpec(clientKeyEnc, 0, clientKeyEnc.length, "AES"))
+            println ""
+            fileTree(targetDir).findAll { file ->
+                if(!file.getName().endsWith(".zip") || exclusions.contains(file.getName())) {
+                    return
+                }
+                println "Found zip: " + file.path
+                ZipFile zipFile = new ZipFile(file)
+                if (zipFile != null) {
+                    String fileName = file.name.replace(".zip", "")
+                    File encZipNewFile = new File(rootDir.getPath() + "/" + outDir + "/" + fileName+".zip")
+                    println "Writing as: " + encZipNewFile.path
+                    if(!encZipNewFile.getParentFile().exists()) {
+                        encZipNewFile.getParentFile().mkdirs()
+                    }
+                    encZipNewFile.createNewFile()
+                    ZipOutputStream zipOutputStream = new ZipOutputStream(new FileOutputStream(encZipNewFile))
+                    Enumeration<? extends ZipEntry> enumeration = zipFile.entries()
+                    String[] types = [".png", ".sp", ".obj", ".vs", ".fs", ".dds"]
+                    while(enumeration.hasMoreElements()) {
+                        ZipEntry zipEntry = enumeration.nextElement()
+                        InputStream inputStream = zipFile.getInputStream(zipEntry)
+                        byte[] bytes = getOutputStream(inputStream).toByteArray()
+                        for (String type : types) {
+                            if(!zipEntry.getName().contains("/") || zipEntry.getName().startsWith("assets/minecraft")
+                                    || zipEntry.getName().startsWith("assets/customnpcs") || zipEntry.getName().contains("textures/blocks")
+                                    || zipEntry.getName().contains("textures/items")) {
+                                println("skipping " + zipEntry.getName())
+                                break
+                            }
+                            if (!zipEntry.isDirectory() && zipEntry.getName().endsWith(type)) {
+                                bytes = cipher.doFinal(bytes)
+                                break
+                            }
+                        }
+                        zipOutputStream.putNextEntry(new ZipEntry(zipEntry.getName()))
+                        zipOutputStream.write(bytes)
+                    }
+                    zipOutputStream.close()
+//                println "Done encoding content. Encoding zip file..."
+//                FileInputStream fileInputStream = new FileInputStream(zipNewFile)
+//                ByteArrayOutputStream byteArrayOutputStream = getOutputStream(fileInputStream)
+//                FileOutputStream fileOutputStream = new FileOutputStream(encZipNewFile)
+//                fileOutputStream.write(byteArrayOutputStream.toByteArray())
+//                fileOutputStream.flush()
+//                fileOutputStream.close()
+                    println "Done"
+                }
+            }
+        }
+    }
+
+
+
+
+
+}
+static ByteArrayOutputStream getOutputStream(InputStream inputStream) {
+    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream()
+    byte[] b = new byte[1024]
+    int numberOfBytesRead
+    while ((numberOfBytesRead = inputStream.read(b)) >= 0) {
+        byteArrayOutputStream.write(b, 0, numberOfBytesRead)
+    }
+    return byteArrayOutputStream
 }

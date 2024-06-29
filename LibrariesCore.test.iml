@@ -6,6 +6,7 @@
         <autoDetectTypes>
           <platformType>MCP</platformType>
         </autoDetectTypes>
+        <projectReimportVersion>1</projectReimportVersion>
       </configuration>
     </facet>
   </component>
@@ -20,7 +21,6 @@
     <content url="file://$MODULE_DIR$/src/test" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="LibrariesCore.api" scope="PROVIDED" />
     <orderEntry type="module" module-name="LibrariesCore.main" />
     <orderEntry type="module-library">
       <library>
@@ -52,7 +52,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/json-20210307.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/json-20231013.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -61,7 +61,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/LibrariesCore-1.0-dev.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/LuxinfineHelper-u-server (1)-deobf.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -145,6 +145,7 @@
     <orderEntry type="library" name="Gradle: tv.twitch:twitch-platform:natives-windows-64:5.16" level="project" />
     <orderEntry type="library" name="Gradle: tv.twitch:twitch-external-platform:natives-windows-32:4.5" level="project" />
     <orderEntry type="library" name="Gradle: tv.twitch:twitch-external-platform:natives-windows-64:4.5" level="project" />
+    <orderEntry type="module" module-name="LibrariesCore.api" scope="PROVIDED" />
     <orderEntry type="module-library" scope="RUNTIME">
       <library>
         <CLASSES>

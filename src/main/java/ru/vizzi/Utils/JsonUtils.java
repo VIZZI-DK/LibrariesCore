@@ -18,16 +18,10 @@ import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
-@GradleSideOnly(GradleSide.SERVER)
 public class JsonUtils {
 
 
-
-	
 	public static final Gson DB_GSON;
-
-
-	    
 	    public static final TypeAdapter<ItemStack> ITEM_STACK_TYPE_ADAPTER = new TypeAdapter<ItemStack>() {
 	        @Override
 	        public void write(JsonWriter out, ItemStack value) throws IOException {
@@ -60,6 +54,9 @@ public class JsonUtils {
 	                int damage = in.nextInt();
 					NBTTagCompound tagCompound = DB_GSON.fromJson(in, NBTTagCompound.class);
 	                //String jsonNbt = in.nextString();
+					if(tagCompound.hasNoTags()){
+						tagCompound = null;
+					}
 	                ItemStack itemStack = ItemStackFactory.create(unlocalizedName, amount, damage, tagCompound);
 	                if(itemStack == null) {
 	                    throw new IOException("item with unlocalized name " + unlocalizedName + " was not found.");
@@ -227,6 +224,23 @@ public class JsonUtils {
 			return new JsonPrimitive(Byte.parseByte(reader.nextString()));
 		} else if (key.endsWith("@s")) {
 			return new JsonPrimitive(Short.parseShort(reader.nextString()));
+		} else if (key.endsWith("@I")) {
+			reader.beginArray();
+			JsonArray jsonArray = new JsonArray();
+			while(reader.hasNext()){
+				jsonArray.add(new JsonPrimitive(reader.nextInt()));
+			}
+			reader.endArray();
+			return jsonArray;
+		}
+		else if (key.endsWith("@B")) {
+			reader.beginArray();
+			JsonArray jsonArray = new JsonArray();
+			while(reader.hasNext()){
+				jsonArray.add(new JsonPrimitive(Byte.parseByte(reader.nextString())));
+			}
+			reader.endArray();
+			return jsonArray;
 		}
 		return null;
 	}

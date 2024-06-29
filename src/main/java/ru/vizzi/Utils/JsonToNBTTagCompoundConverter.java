@@ -9,7 +9,6 @@ import ru.justagod.cutter.GradleSide;
 import ru.justagod.cutter.GradleSideOnly;
 
 import java.util.Map;
-@GradleSideOnly(GradleSide.SERVER)
 public class JsonToNBTTagCompoundConverter {
 
     public static NBTTagCompound convertToNBT(JsonObject json) {

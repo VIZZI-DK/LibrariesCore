@@ -5,6 +5,7 @@ import com.google.gson.FieldAttributes;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.internal.Primitives;
+import com.google.gson.reflect.TypeToken;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
 import net.minecraft.item.ItemStack;
@@ -45,9 +46,82 @@ public interface IConfigGson {
 
     String COMMENT_PREFIX = "<--//";
 
+
+    public static HashMap<String, IConfigGson> CONFIGS = new HashMap<>();
+
     @SneakyThrows
     default void load() {
         loadExceptionally();
+      //  loadOrCreate();
+    }
+
+    default void loadOrCreate() {
+        if (!CONFIGS.containsKey(this.getClass().getName())) {
+            CONFIGS.put(this.getClass().getName(), this);
+         //   createMissingFields();
+        }
+    }
+
+    default void createMissingFields() {
+        List<Class<?>> classes = CommonUtils.getClassesHierarchy(this.getClass());
+        for (Class<?> aClass : classes) {
+            for (Field field : aClass.getDeclaredFields()) {
+                if (!Modifier.isTransient(field.getModifiers()) &&
+                        (aClass.getAnnotation(Configurable.class) != null || field.getAnnotation(Configurable.class) != null)) {
+                    field.setAccessible(true);
+                    try {
+                        if (field.get(this) == null) {
+                            if (field.getType().isAssignableFrom(List.class)) {
+                                field.set(this, new ArrayList<>());
+                            } else if (field.getType().isAssignableFrom(Map.class)) {
+                                field.set(this, new HashMap<>());
+                            } else if (field.getType().isAssignableFrom(Set.class)) {
+                                field.set(this, new HashSet<>());
+                            } else {
+                                Object value = field.getType().newInstance();
+                                field.set(this, value);
+                            }
+                        }
+                        addMissingFieldToConfig(field.getName(), field.get(this));
+                    } catch (IllegalAccessException | InstantiationException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+    }
+
+    default void addMissingFieldToConfig(String fieldName, Object value) {
+        try {
+            File configFile = getConfigFile();
+            if (!configFile.exists()) {
+                return;
+            }
+
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            Type type = new TypeToken<Map<String, Object>>() {}.getType();
+
+            Map<String, Object> configMap;
+            try (Reader reader = new FileReader(configFile)) {
+                configMap = gson.fromJson(reader, type);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+                return;
+            }
+
+            if (!configMap.containsKey(fieldName)) {
+                configMap.put(fieldName, value);
+                String json = gson.toJson(configMap);
+
+                try (Writer writer = new FileWriter(configFile)) {
+                    gson.toJson(configMap, writer);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     default void loadExceptionally() throws NoSuchFieldException, IllegalAccessException, IOException {
@@ -171,6 +245,11 @@ public interface IConfigGson {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    default boolean canReload(){
+        return true;
     }
 
     File getConfigFile();

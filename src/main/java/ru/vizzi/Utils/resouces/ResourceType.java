@@ -25,9 +25,11 @@ public enum ResourceType {
     PNG("png",
             (field, resourceLocation) -> {
                 int wrapFormat = GL13.GL_CLAMP_TO_BORDER;
-                PreLoadableTextureWrapFormat annotation = field.getAnnotation(PreLoadableTextureWrapFormat.class);
-                if(annotation != null) {
-                    wrapFormat = annotation.value();
+                if(field != null) {
+                    PreLoadableTextureWrapFormat annotation = field.getAnnotation(PreLoadableTextureWrapFormat.class);
+                    if (annotation != null) {
+                        wrapFormat = annotation.value();
+                    }
                 }
                 return TextureLoader.preloadTexture(resourceLocation, wrapFormat);
             },

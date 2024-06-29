@@ -24,7 +24,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import ru.vizzi.Utils.CustomFont.EnumStringRenderType;
 import ru.vizzi.Utils.CustomFont.FontContainer;
-import ru.vizzi.Utils.CustomFont.StringCache;
 import ru.vizzi.Utils.CustomFont.TextRenderUtils;
 import ru.vizzi.Utils.obf.IgnoreObf;
 import ru.vizzi.Utils.resouces.CoreAPI;

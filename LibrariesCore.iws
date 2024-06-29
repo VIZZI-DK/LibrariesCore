@@ -5,359 +5,109 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e55d464f-cc28-483a-b492-fedd0e62e257" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/librariescore/textures.gui/pixel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/.idea/modules/1.12.2.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/.idea/modules/1.12.2.test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/Command.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/SetupIdea.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/buildlib.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/lib/json-20210307.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/lib/mysql-connector-j-8.0.32.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/lib/slick2d-core-1.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/AsmHook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/ClassMetadataReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/Hook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/HookClassTransformer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/HookContainerParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/HookInjectorClassVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/HookInjectorFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/HookInjectorMethodVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/HookLogger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/HookPriority.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/ReadClassHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/ReturnCondition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/ReturnValue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/SafeClassWriter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/TypeHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/asm/VariableIdHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/example/AnnotationHooks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/example/ExampleHookLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/minecraft/DeobfuscationMetadataReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/minecraft/HookLibPlugin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/minecraft/HookLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/minecraft/MinecraftClassTransformer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/minecraft/PrimaryClassTransformer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/hooklib/minecraft/SecondaryTransformerHook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/ClientEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/CommonUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/CompletableFutureBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/EntityUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/EventLoadResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/GuiScreenUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/ItemStackFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/ItemStackModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/JsonToNBTTagCompoundConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/JsonUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/LibrariesConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/LibrariesCore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/Logger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/MathUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/NBTTagCompoundToJsonConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/NBTUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/PlayerUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/RandomUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/SyncResultHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/Utils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/config/ConfigComment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/config/Configurable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/config/Flex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/config/IConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/config/IConfigGson.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/config/IConfigJson.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/config/ThrConsumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/config/ThrFunction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/config/json/IJsonParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/config/json/JsonConfigBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/config/json/JsonConfigModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/config/json/JsonConfigParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/customfont/CustomFont.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/customfont/CustomFontRenderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/customfont/EnumStringRenderType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/customfont/FontAPI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/customfont/FontContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/customfont/TextRenderUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/databases/AbstractDatabaseAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/databases/AbstractProviderDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/databases/BiHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/databases/DataInform.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/databases/DatabaseAdaptedBy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/databases/DatabaseManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/databases/DatabaseValue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/databases/IConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/databases/IDatabaseEventListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/databases/mariadb/ConfigDBType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/databases/mariadb/ConfigMariaID.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/databases/mariadb/ConfigMariaList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/databases/mariadb/MariaDBProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/eventhandler/EventLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/eventhandler/RegistryEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/gui/AbstractGuiScreenAdvanced.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/gui/GuiButtonAdvanced.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/gui/GuiButtonAdvancedImage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/gui/GuiButtonNew.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/gui/GuiExtended.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/gui/GuiModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/gui/GuiTextFieldV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/gui/drawmodule/AnimationHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/gui/drawmodule/GuiUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/gui/drawmodule/RenderItemNew.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/gui/drawmodule/ScaleGui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/gui/drawmodule/TextUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/obf/IgnoreObf.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/CoreAPI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/DynamicTextureNew.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/IResourceLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/MinecraftResourcesLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/PNGTextureLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/PreLoadableResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/PreLoadableResourceManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/PreLoadableResourceScanner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/PreLoadableTextureWrapFormat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/ResourceType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/SimpleTextureData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/Texture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/TextureLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/ThrowableRunnable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/java/ru/vizzi/librariescore/resouces/ZipResourceLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/resources/META-INF/core_at.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/resources/mcmod.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/src/main/resources/pack.mcmeta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/LuxinfineHelper-u-server (1)-deobf.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/StringWidthCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/Models/ModelWrapperDisplayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/WorldUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/command/CommandConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/EventResize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiSmallScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/permission/LuxinfineProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/DynamicUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/crypt/FakeDecryptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/crypt/IDecryptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/crypt/MainDecryptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/crypt/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pack.mcmeta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrariesCore.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrariesCore.iws" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrariesCore.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/assets/librariescore/models/blocks/blockwrapper.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/net/minecraft/client/renderer/RenderGlobal$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/net/minecraft/client/renderer/RenderGlobal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/net/minecraft/client/renderer/WorldRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/AsmHook$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/AsmHook$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/AsmHook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/ClassMetadataReader$CheckSuperClassVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/ClassMetadataReader$FindMethodClassVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/ClassMetadataReader$MethodReference.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/ClassMetadataReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/Hook$LocalVariable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/Hook$ReturnValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/Hook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookClassTransformer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookContainerParser$HookAnnotationVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookContainerParser$HookClassVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookContainerParser$HookMethodVisitor$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookContainerParser$HookMethodVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookContainerParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookInjectorClassVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookInjectorFactory$LineNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookInjectorFactory$MethodEnter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookInjectorFactory$MethodExit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookInjectorFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookInjectorMethodVisitor$LineNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookInjectorMethodVisitor$MethodEnter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookInjectorMethodVisitor$MethodExit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookInjectorMethodVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookLogger$SystemOutLogger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookLogger$VanillaLogger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookLogger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/HookPriority.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/ReadClassHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/ReturnCondition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/ReturnValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/SafeClassWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/TypeHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/VariableIdHelper$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/VariableIdHelper$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/asm/VariableIdHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/example/AnnotationHooks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/example/ExampleHookLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/minecraft/DeobfuscationMetadataReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/minecraft/HookLibPlugin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/minecraft/HookLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/minecraft/MinecraftClassTransformer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/minecraft/MinecraftClassTransformer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/minecraft/PrimaryClassTransformer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/minecraft/PrimaryClassTransformer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/hooklib/minecraft/SecondaryTransformerHook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/ClientEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CommonUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CompletableFutureBuilder$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CompletableFutureBuilder$Settings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CompletableFutureBuilder$SyncQueueHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CompletableFutureBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/CustomFont.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/CustomFontRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/EnumStringRenderType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/FontAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/FontContainer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/GlyphCache$Entry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/GlyphCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/StringCache$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/StringCache$ColorCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/StringCache$Entry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/StringCache$Glyph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/StringCache$Key.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/StringCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/CustomFont/TextRenderUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/EntityUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/EventLoadResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/GifDecoder/GifDecoder$GifFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/GifDecoder/GifDecoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/GuiScreenUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/InventoryUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/ItemStackFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/ItemStackModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/JsonToNBTTagCompoundConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/JsonUtils$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/JsonUtils$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/JsonUtils$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/JsonUtils$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/JsonUtils$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/JsonUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/LibrariesConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/LibrariesCore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/Logger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/NBTTagCompoundToJsonConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/NBTUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/PlayerUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/RandomUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/SyncResultHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/Utils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/config/ConfigComment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/config/Configurable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/config/Flex.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/config/IConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/config/IConfigGson$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/config/IConfigGson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/config/IConfigJson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/config/ThrConsumer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/config/ThrFunction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/config/json/IJsonParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/config/json/JsonConfigBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/config/json/JsonConfigModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/config/json/JsonConfigParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/databases/AbstractDatabaseAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/databases/AbstractProviderDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/databases/BiHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/databases/DataInform.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/databases/DatabaseAdaptedBy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/databases/DatabaseManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/databases/DatabaseValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/databases/IConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/databases/IDatabaseEventListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/databases/mariadb/ConfigDBType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/databases/mariadb/ConfigMariaID.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/databases/mariadb/ConfigMariaList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/databases/mariadb/MariaDBProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/eventhandler/EventLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/eventhandler/RegistryEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildlib.jar" beforeDir="false" afterPath="$PROJECT_DIR$/buildlib.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LibrariesCore-1.0-dev.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/json-20210307.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/AbstractGuiScreenAdvanced.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/AbstractGuiScreenAdvanced.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/GuiButtonAdvanced.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/GuiButtonAdvancedImage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/GuiButtonNew.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/GuiExtended.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/GuiModule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/GuiScrollingList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/GuiTextFieldV.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/drawmodule/AnimationHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/drawmodule/GuiDrawUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/drawmodule/GuiUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/drawmodule/RenderItemNew$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/drawmodule/RenderItemNew$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/drawmodule/RenderItemNew$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/drawmodule/RenderItemNew$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/drawmodule/RenderItemNew.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/drawmodule/ScaleGui.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/math/MathRotateHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/math/MathUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/math/QuaternionUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/model/MeshData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/model/Model.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/model/ModelBox.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/model/ModelEvents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/model/ModelLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/model/Vao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/model/Vbo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/model/VertexNM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/obf/IgnoreObf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/player/AbstractExtendedPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/player/ExtendedManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/player/RegistryExtended.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/render/IReloadableRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/render/ReloadableRendererManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/CoreAPI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/CoreAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/DynamicTextureNew.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/IResourceLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/MinecraftResourcesLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/PNGTextureLoader$ImageSimpleData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/PNGTextureLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/PreLoadableResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/PreLoadableResourceManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/PreLoadableResourceScanner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/PreLoadableTextureWrapFormat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/ResourceType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/SimpleTextureData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/Texture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/TextureLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/ThrowableRunnable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/ZipResourceLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/xlv/AbstractResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/xlv/IResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/xlv/ResourceEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/xlv/ResourceLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/xlv/ResourceLoaderOBJ$ModelContainer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/xlv/ResourceLoaderOBJ.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/xlv/ResourceLoadingState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/xlv/ResourceLocationStateful$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/xlv/ResourceLocationStateful.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/resouces/xlv/ResourceManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/BloomOverlayShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/BloomShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/BlurH.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/BlurV.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/DownsampleFirstShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/DownsampleSecondShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/EnumShaderLightingType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/FinalShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/ForwardDirectionalShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/ForwardPointShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/ForwardPointShaderOptimized.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/FrameBuffer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/GBuffer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/GBufferDirectionalShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/GBufferPointShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/GBufferShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/GBufferShaderOld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/GBufferUnbindShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/GL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/GameSettings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/KrogenitShaders.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/PostProcessing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/ShaderLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/ShaderProgram.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/ShaderTextLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/UnsampleBloomShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/pbr/AbstractPBRShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/pbr/ForwardPBRDirectionalShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/pbr/ForwardPBRDirectionalShaderOld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/pbr/ForwardPBRPointShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/pbr/ForwardPBRPointShaderOld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/pbr/GBufferPBRDirectionalShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/pbr/GBufferPBRPointShader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/shader/pbr/IPBR.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/minecraft/client/renderer/RenderGlobal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/minecraft/client/renderer/WorldRenderer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hooklib/example/AnnotationHooks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hooklib/example/ExampleHookLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ClientEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ClientEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/CustomFont.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/CustomFontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/CustomFontRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/GlyphCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/StringCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/TextRenderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/TextRenderUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/EntityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/EntityUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ItemStackFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ItemStackFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ItemStackModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ItemStackModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/JsonToNBTTagCompoundConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/JsonToNBTTagCompoundConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/JsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/JsonUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/NBTTagCompoundToJsonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/NBTTagCompoundToJsonConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/config/IConfigGson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/config/IConfigGson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/EventLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/EventLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/AbstractGuiScreenAdvanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/AbstractGuiScreenAdvanced.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Vao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Vao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Vbo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Vbo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/librariescore/models/blocks/blockwrapper.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonAdvanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonAdvanced.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonNew.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiExtended.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiExtended.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiDrawUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiDrawUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/ScaleGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/ScaleGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/MeshData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Model.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelBox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelEvents.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelWrapperDisplayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelWrapperDisplayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Vao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Vbo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/VertexNM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/CoreAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/CoreAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/ResourceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/ResourceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/AbstractResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/IResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceLoaderOBJ.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceLoadingState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceLocationStateful.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/BloomOverlayShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/BloomShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/BlurH.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/BlurV.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/DownsampleFirstShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/DownsampleSecondShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/EnumShaderLightingType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/FinalShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ForwardDirectionalShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ForwardPointShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ForwardPointShaderOptimized.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/FrameBuffer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBuffer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferDirectionalShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferPointShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferShaderOld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferUnbindShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GameSettings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/KrogenitShaders.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/PostProcessing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ShaderLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ShaderProgram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ShaderTextLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/UnsampleBloomShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/AbstractPBRShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/ForwardPBRDirectionalShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/ForwardPBRDirectionalShaderOld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/ForwardPBRPointShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/ForwardPBRPointShaderOld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/GBufferPBRDirectionalShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/GBufferPBRPointShader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/IPBR.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -367,6 +117,9 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
     <option name="REVERSE_PATCH" value="false" />
+  </component>
+  <component name="DarkyenusTimeTracker">
+    <option name="totalTimeSeconds" value="7762" />
   </component>
   <component name="DebuggerManager">
     <breakpoint_any converted="true">
@@ -433,17 +186,6 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="LibrariesCore" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="LibrariesCore" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -455,8 +197,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -467,7 +209,20 @@
         <entry key="$PROJECT_DIR$" value="1.12.2" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;VIZZI-DK&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/VIZZI-DK/LibrariesCore.git&quot;,
+    &quot;accountId&quot;: &quot;fa26b7b9-9fc0-45ad-8e87-bcc9256dac24&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://C:/Program Files/Eclipse Adoptium/jdk-8.0.352.8-hotspot/src.zip!/java/util/function/BiConsumer.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/build/dirtyArtifacts/forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar!/net/minecraft/util/ResourceLocation.class" root0="SKIP_INSPECTION" />
@@ -479,6 +234,9 @@
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2LVHEP98BW5XRrKiuFqBqzBSMTm" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -495,10 +253,17 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.Minecraft Client.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.LibrariesCore [buildAll].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LibrariesCore [buildClient].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LibrariesCore [build].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Java/MyProduct/LibrariesCore/src/main/resources&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java/MyProduct/LibrariesCore/src/main/java/ru/vizzi/Utils/Models&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -507,11 +272,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\MyProduct\LibrariesCore\src\main\java\ru\vizzi\Utils\Models" />
       <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources" />
+      <recent name="D:\Java\MyProduct\LibrariesCore\lib" />
       <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources\assets\librariescore" />
       <recent name="D:\Java\MyProduct\LibrariesCore\src\main\java\ru\vizzi\Utils" />
-      <recent name="D:\Java\MyProduct\LibrariesCore\1.12.2\src\main\java\ru\vizzi\Utils" />
-      <recent name="D:\Java\MyProduct\LibrariesCore\src\main\java\ru\vizzi\Utils\CustomFont" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources\assets\librariescore\textures.gui" />
@@ -519,6 +284,8 @@
       <recent name="D:\Java\MyProduct\LibrariesCore\src\main\java\ru\vizzi\Utils\shader" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.vizzi.Utils" />
+      <recent name="ru.vizzi.Utils.gui" />
       <recent name="ru.vizzi.Utils.CustomFont" />
     </key>
   </component>
@@ -572,6 +339,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LibrariesCore [buildAll]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildAll" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="LibrariesCore [buildClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildClient" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="LibrariesCore [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -591,6 +402,29 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="LibrariesCore [encodeResources]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="encodeResources" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="LibrariesCore [proGuardObfuscate]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -612,6 +446,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -640,14 +475,18 @@
     <list>
       <item itemvalue="Application.Minecraft Client" />
       <item itemvalue="Application.Minecraft Server" />
+      <item itemvalue="Gradle.LibrariesCore [buildAll]" />
+      <item itemvalue="Gradle.LibrariesCore [buildClient]" />
       <item itemvalue="Gradle.LibrariesCore [build]" />
+      <item itemvalue="Gradle.LibrariesCore [encodeResources]" />
       <item itemvalue="Gradle.LibrariesCore [proGuardObfuscate]" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.LibrariesCore [build]" />
-        <item itemvalue="Gradle.LibrariesCore [proGuardObfuscate]" />
-        <item itemvalue="Gradle.LibrariesCore [build]" />
+        <item itemvalue="Gradle.LibrariesCore [buildClient]" />
+        <item itemvalue="Gradle.LibrariesCore [buildAll]" />
+        <item itemvalue="Gradle.LibrariesCore [encodeResources]" />
         <item itemvalue="Gradle.LibrariesCore [proGuardObfuscate]" />
       </list>
     </recent_temporary>
@@ -729,6 +568,37 @@
     <MESSAGE value="test" />
     <option name="LAST_COMMIT_MESSAGE" value="test" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/PreLoadableResourceManager.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/crypt/MainDecryptor.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/crypt/MainDecryptor.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/crypt/MainDecryptor.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/JsonUtils.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

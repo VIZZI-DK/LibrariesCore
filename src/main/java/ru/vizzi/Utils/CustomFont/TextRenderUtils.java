@@ -2,9 +2,6 @@ package ru.vizzi.Utils.CustomFont;
 
 import static org.lwjgl.opengl.GL11.*;
 
-/**
- * @author Zloy_GreGan
- */
 
 public class TextRenderUtils {
 
