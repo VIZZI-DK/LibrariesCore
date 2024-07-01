@@ -19,6 +19,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public interface IConfigGson {
@@ -126,7 +127,7 @@ public interface IConfigGson {
 
     default void loadExceptionally() throws NoSuchFieldException, IllegalAccessException, IOException {
         if(getConfigFile().exists()) {
-            @Cleanup BufferedReader bufferedReader = new BufferedReader(new FileReader(getConfigFile()));
+            @Cleanup BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(getConfigFile()), StandardCharsets.UTF_8));
             StringBuilder source = new StringBuilder();
             String line;
             while((line = bufferedReader.readLine()) != null) {
@@ -237,7 +238,7 @@ public interface IConfigGson {
 //            LOGGER.info(json);
 //        }
         try {
-            @Cleanup FileWriter fileWriter = new FileWriter(getConfigFile());
+            @Cleanup OutputStreamWriter fileWriter = new OutputStreamWriter(new FileOutputStream(getConfigFile()), StandardCharsets.UTF_8);
             for (String s : split) {
                 fileWriter.write(s);
             }
