@@ -102,7 +102,7 @@ public class CustomFontRenderer {
                     boolean bold = font.rs.getResourcePath().toLowerCase().contains("bold");
                     UnicodeFont unicodeFont = new UnicodeFont(fontBase, (int) ScaleGui.get(font.fontSize), bold, false);
                     unicodeFont.getEffects().add(new ColorEffect(java.awt.Color.WHITE));
-                    unicodeFont.addGlyphs(symbols);
+                    unicodeFont.addGlyphs(symbolsNew);
                     unicodeFont.setDisplayListCaching(true);
                     return unicodeFont;
                 } catch (Exception e){
