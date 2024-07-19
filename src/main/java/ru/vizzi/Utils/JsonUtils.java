@@ -224,24 +224,25 @@ public class JsonUtils {
 			return new JsonPrimitive(Byte.parseByte(reader.nextString()));
 		} else if (key.endsWith("@s")) {
 			return new JsonPrimitive(Short.parseShort(reader.nextString()));
-		} else if (key.endsWith("@I")) {
-			reader.beginArray();
-			JsonArray jsonArray = new JsonArray();
-			while(reader.hasNext()){
-				jsonArray.add(new JsonPrimitive(reader.nextInt()));
-			}
-			reader.endArray();
-			return jsonArray;
 		}
-		else if (key.endsWith("@B")) {
-			reader.beginArray();
-			JsonArray jsonArray = new JsonArray();
-			while(reader.hasNext()){
-				jsonArray.add(new JsonPrimitive(Byte.parseByte(reader.nextString())));
-			}
-			reader.endArray();
-			return jsonArray;
-		}
+//		else if (key.endsWith("@I")) {
+//			reader.beginArray();
+//			JsonArray jsonArray = new JsonArray();
+//			while(reader.hasNext()){
+//				jsonArray.add(new JsonPrimitive(reader.nextInt()));
+//			}
+//			reader.endArray();
+//			return jsonArray;
+//		}
+//		else if (key.endsWith("@B")) {
+//			reader.beginArray();
+//			JsonArray jsonArray = new JsonArray();
+//			while(reader.hasNext()){
+//				jsonArray.add(new JsonPrimitive(Byte.parseByte(reader.nextString())));
+//			}
+//			reader.endArray();
+//			return jsonArray;
+//		}
 		return null;
 	}
 	public static JsonElement isJsonArray(String key, JsonReader reader) throws IOException {
