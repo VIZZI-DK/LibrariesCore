@@ -20,6 +20,8 @@ import org.lwjgl.opengl.GL11;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.UnicodeFont;
 import org.newdawn.slick.font.effects.ColorEffect;
+import ru.justagod.cutter.GradleSide;
+import ru.justagod.cutter.GradleSideOnly;
 import ru.vizzi.Utils.LibrariesCore;
 import ru.vizzi.Utils.eventhandler.EventResize;
 import ru.vizzi.Utils.eventhandler.RegistryEvent;
@@ -33,9 +35,7 @@ import ru.vizzi.Utils.resouces.CoreAPI;
 
 
 
-
-@SideOnly(Side.CLIENT)
-@RegistryEvent
+@GradleSideOnly(GradleSide.CLIENT)
 public class CustomFontRenderer {
     private static final Map<String, UnicodeFont> cache = new HashMap();
     private static final Map<String, Color> colors = new HashMap();

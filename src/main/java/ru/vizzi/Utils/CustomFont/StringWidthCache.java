@@ -1,10 +1,12 @@
 package ru.vizzi.Utils.CustomFont;
 
 import org.newdawn.slick.UnicodeFont;
+import ru.justagod.cutter.GradleSide;
+import ru.justagod.cutter.GradleSideOnly;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-
+@GradleSideOnly(GradleSide.CLIENT)
 public class StringWidthCache {
     private final Map<String, Integer> cache;
     private final FontContainer font;

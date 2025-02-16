@@ -1,5 +1,6 @@
 package ru.vizzi.Utils.eventhandler;
 
+import cpw.mods.fml.relauncher.Side;
 import ru.vizzi.Utils.obf.IgnoreObf;
 
 import static java.lang.annotation.ElementType.TYPE;
@@ -12,5 +13,10 @@ import java.lang.annotation.Target;
 @Target(TYPE)
 @IgnoreObf
 public @interface RegistryEvent {
+
+
+    String modid() default "";
+
+    Side side() default Side.CLIENT;
 
 }

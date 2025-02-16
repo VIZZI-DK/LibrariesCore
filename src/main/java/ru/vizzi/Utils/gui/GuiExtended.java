@@ -12,6 +12,7 @@ import net.minecraft.entity.EntityList;
 import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import org.lwjgl.input.Mouse;
 import ru.vizzi.Utils.obf.IgnoreObf;
 
 @Getter
@@ -143,19 +144,22 @@ public class GuiExtended extends AbstractGuiScreenAdvanced {
 
     @Override
     public void handleMouseInput() {
+
+        int x = Mouse.getEventX() * this.width / this.mc.displayWidth;
+        int y = this.height - Mouse.getEventY() * this.height / this.mc.displayHeight - 1;
+
+
         for (GuiModule module : modules) {
-            if (module.isActive()) {
+            if (module.isActive() && (isModuleBox(module, x, y) || module.isSubModuleActive())) {
                 module.handleMouseInput();
-                if (module.isGuiFocused()) {
-                    return;
-                }
+                return;
             }
         }
         super.handleMouseInput();
     }
 
     public boolean isModuleBox(GuiModule module, int mouseX, int mouseY) {
-        return (module.getX() > mouseX && mouseX < module.getX() + module.width && module.getY() > mouseY && mouseY < module.getY() + module.height);
+        return (mouseX > module.getX() && mouseX < module.getX() + module.getWidthTemp() && mouseY > module.getY() && mouseY < module.getY() + module.getHeightTemp());
     }
 
 
@@ -164,7 +168,7 @@ public class GuiExtended extends AbstractGuiScreenAdvanced {
         if (mouseButton == 0) {
             for (GuiModule module : modules) {
                 if (module.isActive()) {
-                    if (isModuleBox(module, mouseX, mouseY)) {
+                    if (isModuleBox(module, mouseX, mouseY) || module.isSubModuleActive()) {
                         module.mouseClicked(mouseX, mouseY, mouseButton);
                         return;
 

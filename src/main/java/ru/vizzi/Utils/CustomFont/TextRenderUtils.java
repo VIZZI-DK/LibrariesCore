@@ -1,8 +1,11 @@
 package ru.vizzi.Utils.CustomFont;
 
+import ru.justagod.cutter.GradleSide;
+import ru.justagod.cutter.GradleSideOnly;
+
 import static org.lwjgl.opengl.GL11.*;
 
-
+@GradleSideOnly(GradleSide.CLIENT)
 public class TextRenderUtils {
 
     public static <T> void drawText(float posX, float posY, int color, T text, FontContainer font) {

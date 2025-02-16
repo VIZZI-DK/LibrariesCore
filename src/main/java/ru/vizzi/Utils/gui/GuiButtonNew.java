@@ -1,5 +1,6 @@
 package ru.vizzi.Utils.gui;
 
+import cpw.mods.fml.common.registry.GameData;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import lombok.Getter;
@@ -47,6 +48,7 @@ public class GuiButtonNew extends Gui
     {
         this.width = 200;
         this.height = 20;
+
         this.enabled = true;
         this.visible = true;
         this.id = p_i1021_1_;

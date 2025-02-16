@@ -1,4 +1,4 @@
-import proguard.gradle.ProGuardTask
+
 
 import javax.crypto.Cipher
 import javax.crypto.spec.SecretKeySpec
@@ -47,8 +47,6 @@ cutter.validation = false
 jar {
     manifest {
         attributes 'FMLAT': 'example_at.cfg'
-        attributes 'FMLCorePlugin': 'ru.hooklib.example.ExampleHookLoader'
-        attributes 'FMLCorePluginContainsFMLMod': 'true'
     }
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from zipTree('buildlib.jar')
@@ -90,63 +88,6 @@ artifacts {
     archives sourcesJar
 }
 
-task proGuardObfuscate(type: ProGuardTask) {
-    configuration 'proguard/config.txt'
-
-    injars 'build/libs/'+archivesBaseName+'-'+version+'.jar'
-    outjars 'build/libs/'+archivesBaseName+'-'+version+'-obf.jar'
-
-    libraryjars "${System.getProperty("java.home")}/lib/rt.jar"
-    libraryjars "${System.getProperty("java.home")}/lib/jce.jar"
-    libraryjars sourceSets.main.compileClasspath
-    keepclasseswithmembers "class ru.vizzi.** { @class ru.vizzi.Utils.obf.IgnoreObf *;}"
-
-
-
-    printmapping 'proguard/obfuscate_mappings.txt'
-    //obfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-   // classobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-    //packageobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-
-}
-//task proGuardObfuscateClient(type: ProGuardTask) {
-//    configuration 'proguard/config.txt'
-//
-//    injars 'build/libs/'+archivesBaseName+'-'+version+'-client.jar'
-//    outjars 'build/libs/'+archivesBaseName+'-'+version+'-client-obf.jar'
-//
-//    libraryjars 'proguard/rt.jar'
-//    libraryjars 'proguard/libraries'
-//
-//    allowaccessmodification
-//    overloadaggressively
-//
-//    printmapping 'proguard/obfuscate_mappings.txt'
-//    obfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-//    classobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-//    packageobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-//
-//
-//}
-//task proGuardObfuscateServer(type: ProGuardTask) {
-//    configuration 'proguard/config.txt'
-//
-//    injars 'build/libs/'+archivesBaseName+'-'+version+'-server.jar'
-//    outjars 'build/libs/'+archivesBaseName+'-'+version+'-server-obf.jar'
-//
-//    libraryjars 'proguard/rt.jar'
-//    libraryjars 'proguard/libraries'
-//
-//    allowaccessmodification
-//    overloadaggressively
-//
-//    printmapping 'proguard/obfuscate_mappings.txt'
-//    obfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-//    classobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-//    packageobfuscationdictionary 'proguard/obfuscate_dictionary.txt'
-//
-//
-//}
 
 task zipMod(type: Zip) {
     archiveName = archivesBaseName+"-"+version+".zip"

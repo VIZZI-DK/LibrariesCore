@@ -38,6 +38,13 @@
   <component name="DiscordProjectSettings">
     <option name="show" value="ASK" />
     <option name="description" value="" />
+    <option name="applicationTheme" value="default" />
+    <option name="iconsTheme" value="default" />
+    <option name="button1Title" value="" />
+    <option name="button1Url" value="" />
+    <option name="button2Title" value="" />
+    <option name="button2Url" value="" />
+    <option name="customApplicationId" value="" />
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="GradleMigrationSettings" migrationVersion="1" />
@@ -240,6 +247,7 @@
     <library name="Gradle: :forgeSrc:1.7.10-10.13.4.1614-1.7.10" external-system-id="GRADLE">
       <ANNOTATIONS>
         <root url="jar://$APPLICATION_PLUGINS_DIR$/Minecraft Development/lib/resources/externalAnnotations.jar!/" />
+        <root url="jar://$APPLICATION_PLUGINS_DIR$/MinecraftDev/lib/resources/externalAnnotations.jar!/" />
       </ANNOTATIONS>
       <CLASSES>
         <root url="jar://$PROJECT_DIR$/build/dirtyArtifacts/forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar!/" />

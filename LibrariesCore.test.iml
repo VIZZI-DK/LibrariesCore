@@ -52,6 +52,15 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/JarSplitterAPI-1.7.10-dev.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/json-20231013.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -61,7 +70,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/LuxinfineHelper-u-server (1)-deobf.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/LuxinfineHelper-1.7.10-1.7-dev.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

@@ -5,23 +5,51 @@ package ru.vizzi.Utils.eventhandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.ArrayList;
-
-import org.apache.logging.log4j.Logger;
+import java.util.Map;
 
 import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.discovery.ASMDataTable;
+import cpw.mods.fml.common.discovery.asm.ModAnnotation;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.eventhandler.Event;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.relauncher.ReflectionHelper;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraftforge.common.MinecraftForge;
 import ru.vizzi.Utils.LibrariesCore;
 
 public class EventLoader {
     public void onPreInit(FMLPreInitializationEvent event) {
+        boolean isGradle = false;
+        try {
+            Class.forName("GradleStart");
+            isGradle = true;
+        } catch (Exception ignored){
+        }
         for (final ASMDataTable.ASMData data : event.getAsmData().getAll(RegistryEvent.class.getName())) {
             try {
+//                Map<String, Object> objectMap = data.getAnnotationInfo();
+//                Side side = null;
+//                if(objectMap.containsKey("side")){
+//                    String s =  ReflectionHelper.getPrivateValue(ModAnnotation.EnumHolder.class, (ModAnnotation.EnumHolder) objectMap.get("side"), "value");
+//                    side = s.equals("CLIENT") ? Side.CLIENT : s.equals("SERVER") ? Side.SERVER: null;
+//                }
+//                if(!isGradle){
+//                    if(side != FMLCommonHandler.instance().getSide()){
+//                        continue;
+//                    }
+//                }
+//                if (data.getAnnotationInfo().containsKey("modid")) {
+//                    String modid = (String) data.getAnnotationInfo().get("modid");
+//                    if(!Loader.isModLoaded(modid)){
+//                        continue;
+//                    }
+             //   }
                 LibrariesCore.logger.debug("Class event: %s", data.getClassName());
                 final Object obj = Class.forName(data.getClassName()).newInstance();
+
+
                 boolean hasOreGenEvent = false;
                 boolean hasTerrainGenEvent = false;
                 boolean hasMinecraftForgeEvent = false;

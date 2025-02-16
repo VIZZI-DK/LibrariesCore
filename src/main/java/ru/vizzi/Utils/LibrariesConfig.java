@@ -19,9 +19,9 @@ public class LibrariesConfig implements IConfigGson {
         return config;
     }
 
-    @Configurable
+    @Configurable(comment = "Выводить логи в консоль")
     public boolean DEBUG = false;
-    @Configurable
+    @Configurable(comment = "Путь к текстурам")
     public boolean mcTextureLoc = true;
 
 

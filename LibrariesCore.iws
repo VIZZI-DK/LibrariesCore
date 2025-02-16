@@ -5,109 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e55d464f-cc28-483a-b492-fedd0e62e257" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/lib/LuxinfineHelper-u-server (1)-deobf.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/StringWidthCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/Models/ModelWrapperDisplayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/WorldUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/command/CommandConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/EventResize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiSmallScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/permission/LuxinfineProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/DynamicUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/crypt/FakeDecryptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/crypt/IDecryptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/crypt/MainDecryptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/crypt/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pack.mcmeta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/JarSplitterAPI-1.7.10-dev.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/LuxinfineHelper-1.7.10-1.7-dev.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/librariescore/fonts/2_Bold.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrariesCore.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrariesCore.iws" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrariesCore.rar" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.rar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrariesCore.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildlib.jar" beforeDir="false" afterPath="$PROJECT_DIR$/buildlib.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LibrariesCore-1.0-dev.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/json-20210307.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/AbstractGuiScreenAdvanced.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibrariesCore.main/ru/vizzi/Utils/gui/AbstractGuiScreenAdvanced.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hooklib/example/AnnotationHooks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hooklib/example/ExampleHookLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LuxinfineHelper-u-server (1)-deobf.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ClientEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ClientEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/CustomFont.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/CustomFontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/CustomFontRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/EnumStringRenderType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/EnumStringRenderType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/GlyphCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/StringCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/StringWidthCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/StringWidthCache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/TextRenderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/TextRenderUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/EntityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/EntityUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ItemStackFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ItemStackFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ItemStackModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ItemStackModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/JsonToNBTTagCompoundConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/JsonToNBTTagCompoundConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/JsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/JsonUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/GuiScreenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/GuiScreenUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/NBTTagCompoundToJsonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/NBTTagCompoundToJsonConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/config/IConfigGson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/config/IConfigGson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/EventLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/EventLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/AbstractGuiScreenAdvanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/AbstractGuiScreenAdvanced.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonAdvanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonAdvanced.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/RegistryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/RegistryEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonNew.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiExtended.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiExtended.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiDrawUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiDrawUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/GuiUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/ScaleGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/drawmodule/ScaleGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/MeshData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Model.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelBox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelEvents.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelWrapperDisplayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/ModelWrapperDisplayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Vao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/Vbo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/model/VertexNM.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/CoreAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/CoreAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/ResourceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/ResourceType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/AbstractResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/IResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceLoaderOBJ.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceLoadingState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceLocationStateful.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/xlv/ResourceManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/BloomOverlayShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/BloomShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/BlurH.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/BlurV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/DownsampleFirstShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/DownsampleSecondShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/EnumShaderLightingType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/FinalShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ForwardDirectionalShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ForwardPointShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ForwardPointShaderOptimized.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/FrameBuffer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBuffer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferDirectionalShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferPointShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferShaderOld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GBufferUnbindShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GL.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/GameSettings.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/KrogenitShaders.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/PostProcessing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ShaderLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ShaderProgram.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/ShaderTextLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/UnsampleBloomShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/AbstractPBRShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/ForwardPBRDirectionalShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/ForwardPBRDirectionalShaderOld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/ForwardPBRPointShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/ForwardPBRPointShaderOld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/GBufferPBRDirectionalShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/GBufferPBRPointShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/shader/pbr/IPBR.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiSmallScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiSmallScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/permission/LuxinfineProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/permission/LuxinfineProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/player/ExtendedManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/player/ExtendedManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/PreLoadableResourceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/PreLoadableResourceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/methods.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pack.mcmeta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +46,7 @@
     <option name="REVERSE_PATCH" value="false" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="7762" />
+    <option name="totalTimeSeconds" value="16913" />
   </component>
   <component name="DebuggerManager">
     <breakpoint_any converted="true">
@@ -178,13 +105,7 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="LibrariesCore" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="LibrariesCore" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -197,8 +118,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -220,7 +141,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/VIZZI-DK/LibrariesCore.git&quot;,
-    &quot;accountId&quot;: &quot;fa26b7b9-9fc0-45ad-8e87-bcc9256dac24&quot;
+    &quot;accountId&quot;: &quot;c1f30ee1-ce6f-4b33-88b3-32d8fe50804c&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -256,6 +177,7 @@
     &quot;Application.Minecraft Client.executor&quot;: &quot;Debug&quot;,
     &quot;Gradle.LibrariesCore [buildAll].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.LibrariesCore [buildClient].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LibrariesCore [buildServer].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.LibrariesCore [build].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -263,22 +185,24 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Java/MyProduct/LibrariesCore/src/main/java/ru/vizzi/Utils/Models&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java/MyProduct/LibrariesCore/src/main/resources/assets/librariescore/fonts&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.27494907&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources\assets\librariescore\fonts" />
+      <recent name="D:\Java\MyProduct\LibrariesCore\lib" />
       <recent name="D:\Java\MyProduct\LibrariesCore\src\main\java\ru\vizzi\Utils\Models" />
       <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources" />
-      <recent name="D:\Java\MyProduct\LibrariesCore\lib" />
       <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources\assets\librariescore" />
-      <recent name="D:\Java\MyProduct\LibrariesCore\src\main\java\ru\vizzi\Utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources\assets\librariescore\fonts" />
       <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources\assets\librariescore\textures.gui" />
       <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources\assets\librariescore\models\blocks" />
       <recent name="D:\Java\MyProduct\LibrariesCore\src\main\java\ru\vizzi\Utils\shader" />
@@ -383,6 +307,28 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="LibrariesCore [buildServer]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildServer" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="LibrariesCore [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -427,28 +373,6 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LibrariesCore [proGuardObfuscate]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="proGuardObfuscate" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -475,19 +399,19 @@
     <list>
       <item itemvalue="Application.Minecraft Client" />
       <item itemvalue="Application.Minecraft Server" />
+      <item itemvalue="Gradle.LibrariesCore [buildServer]" />
       <item itemvalue="Gradle.LibrariesCore [buildAll]" />
       <item itemvalue="Gradle.LibrariesCore [buildClient]" />
       <item itemvalue="Gradle.LibrariesCore [build]" />
       <item itemvalue="Gradle.LibrariesCore [encodeResources]" />
-      <item itemvalue="Gradle.LibrariesCore [proGuardObfuscate]" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.LibrariesCore [build]" />
-        <item itemvalue="Gradle.LibrariesCore [buildClient]" />
+        <item itemvalue="Gradle.LibrariesCore [buildServer]" />
         <item itemvalue="Gradle.LibrariesCore [buildAll]" />
+        <item itemvalue="Gradle.LibrariesCore [buildClient]" />
         <item itemvalue="Gradle.LibrariesCore [encodeResources]" />
-        <item itemvalue="Gradle.LibrariesCore [proGuardObfuscate]" />
       </list>
     </recent_temporary>
   </component>
@@ -535,7 +459,15 @@
       <option name="project" value="LOCAL" />
       <updated>1680299604804</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test">
+      <option name="closed" value="true" />
+      <created>1719971012692</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719971012692</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -574,7 +506,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/PreLoadableResourceManager.java</url>
-          <line>83</line>
+          <line>85</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -596,6 +528,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/JsonUtils.java</url>
           <line>59</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/EventLoader.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/JsonUtils.java</url>
+          <line>169</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -10,7 +10,6 @@ import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 
 import com.google.common.util.concurrent.ListenableFutureTask;
-import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -18,20 +17,18 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
-import lombok.Getter;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
 import org.apache.commons.lang3.Validate;
 import ru.justagod.cutter.GradleSide;
 import ru.justagod.cutter.GradleSideOnly;
+import ru.vizzi.Utils.CustomFont.CustomFontRenderer;
 import ru.vizzi.Utils.databases.DatabaseManager;
 import ru.vizzi.Utils.eventhandler.EventLoader;
 import ru.vizzi.Utils.obf.IgnoreObf;
 import ru.vizzi.Utils.resouces.CoreAPI;
+import ru.vizzi.Utils.resouces.PreLoadableResourceManager;
 import ru.vizzi.Utils.resouces.TextureLoader;
-import javax.xml.crypto.Data;
 
 
 @Mod(modid = LibrariesCore.MODID, name = LibrariesCore.MODNAME, version = LibrariesCore.VERSION)
@@ -78,6 +75,13 @@ public class LibrariesCore {
 		EventLoader eventLoader = new EventLoader();
 		eventLoader.onPreInit(event);
 		FMLCommonHandler.instance().bus().register(this);
+
+		if(isClient) {
+			CommonUtils.registerAllEvents(PreLoadableResourceManager.class);
+			CommonUtils.registerAllEvents(GuiScreenUtils.class);
+			CommonUtils.registerAllEvents(ClientEvent.class);
+			CommonUtils.registerAllEvents(CustomFontRenderer.class);
+		}
 	      
 	   }
 	@EventHandler

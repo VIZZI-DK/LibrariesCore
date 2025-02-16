@@ -8,8 +8,10 @@ package ru.vizzi.Utils.CustomFont;
 import lombok.Getter;
 import lombok.Setter;
 import net.minecraft.util.ResourceLocation;
+import ru.justagod.cutter.GradleSide;
+import ru.justagod.cutter.GradleSideOnly;
 import ru.vizzi.Utils.gui.drawmodule.ScaleGui;
-
+@GradleSideOnly(GradleSide.CLIENT)
 @Getter
 @Setter
 public class FontContainer {

@@ -6,13 +6,15 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
+import ru.justagod.cutter.GradleSide;
+import ru.justagod.cutter.GradleSideOnly;
 import ru.vizzi.Utils.CustomFont.CustomFontRenderer;
 import ru.vizzi.Utils.eventhandler.EventResize;
 import ru.vizzi.Utils.eventhandler.RegistryEvent;
 import ru.vizzi.Utils.gui.drawmodule.AnimationHelper;
 import ru.vizzi.Utils.gui.drawmodule.ScaleGui;
 
-@RegistryEvent
+@GradleSideOnly(GradleSide.CLIENT)
 public class ClientEvent {
 
     public static int lastWidth = -1;

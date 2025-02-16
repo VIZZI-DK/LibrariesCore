@@ -2,10 +2,12 @@ package ru.vizzi.Utils.CustomFont;
 
 import lombok.SneakyThrows;
 import net.minecraft.util.ResourceLocation;
+import ru.justagod.cutter.GradleSide;
+import ru.justagod.cutter.GradleSideOnly;
 import ru.vizzi.Utils.gui.drawmodule.ScaleGui;
 
 import java.util.HashMap;
-
+@GradleSideOnly(GradleSide.CLIENT)
 public class FontAPI {
 
     private static HashMap<ResourceLocation, HashMap<Integer, FontContainer>> fontsCache = new HashMap<>();

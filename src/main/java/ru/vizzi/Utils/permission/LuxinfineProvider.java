@@ -4,9 +4,12 @@ package ru.vizzi.Utils.permission;
 import ml.luxinfine.config.api.ConfigAPI;
 import ml.luxinfine.config.api.ConfigValue;
 import ml.luxinfine.config.internal.LazyConfigValue;
+import ml.luxinfine.helper.integrations.DefaultIntegrations;
 import ml.luxinfine.helper.integrations.Economy;
 import ml.luxinfine.helper.integrations.Permissions;
 import ml.luxinfine.helper.integrations.Regions;
+import net.minecraft.command.ICommandSender;
+import net.minecraft.entity.player.EntityPlayerMP;
 import ru.justagod.cutter.GradleSide;
 import ru.justagod.cutter.GradleSideOnly;
 
@@ -22,5 +25,10 @@ public class LuxinfineProvider {
 
     @ConfigValue("Провайдер регионов")
     public static LazyConfigValue<Regions> region = ConfigAPI.lazy("dummy");
+
+
+    public static boolean hasPermission(ICommandSender iCommandSender, String permission) {
+        return DefaultIntegrations.permissions().hasPermission(iCommandSender, permission);
+    }
 
 }

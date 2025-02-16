@@ -14,11 +14,13 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import net.minecraft.util.ResourceLocation;
+import ru.justagod.cutter.GradleSide;
+import ru.justagod.cutter.GradleSideOnly;
 import ru.vizzi.Utils.EventLoadResource;
 import ru.vizzi.Utils.eventhandler.RegistryEvent;
 
 @RequiredArgsConstructor
-@RegistryEvent
+@GradleSideOnly(GradleSide.CLIENT)
 public class PreLoadableResourceManager {
 
     private final ThreadPoolExecutor executorService = (ThreadPoolExecutor) Executors.newFixedThreadPool(3);

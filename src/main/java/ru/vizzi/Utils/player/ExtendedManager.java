@@ -14,7 +14,6 @@ import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent.Clone;
 import ru.vizzi.Utils.eventhandler.RegistryEvent;
 
-@RegistryEvent
 public class ExtendedManager {
 	
 	private static ExtendedManager instance;

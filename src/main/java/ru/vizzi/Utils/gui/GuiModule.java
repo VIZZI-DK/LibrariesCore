@@ -11,7 +11,7 @@ import ru.vizzi.Utils.obf.IgnoreObf;
 @IgnoreObf
 public class GuiModule extends GuiExtended {
 
-	@Getter
+    @Getter
     @Setter
     private float widthTemp, heightTemp, x, y;
 
@@ -41,11 +41,11 @@ public class GuiModule extends GuiExtended {
         height = mc.displayHeight;
     }
 
-    public boolean isGuiFocused(){
+    public boolean isGuiFocused() {
         boolean foc = focused;
-        if(!foc){
-            for(GuiModule guiModule : modules){
-                if(guiModule.isActive() && guiModule.focused){
+        if (!foc) {
+            for (GuiModule guiModule : modules) {
+                if (guiModule.isActive() && guiModule.focused) {
                     foc = true;
                     break;
                 }
@@ -53,6 +53,16 @@ public class GuiModule extends GuiExtended {
         }
         return foc;
     }
+
+    public boolean isSubModuleActive() {
+        for (GuiModule guiModule : modules) {
+            if (guiModule.isActive()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     @Override
     public void actionPerformed(GuiButton guiButton) {
@@ -66,10 +76,11 @@ public class GuiModule extends GuiExtended {
     public void setActive(boolean active) {
         isActive = active;
     }
+
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTick) {
 
-        
+
         super.drawScreen(mouseX, mouseY, partialTick);
 
     }

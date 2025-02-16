@@ -43,11 +43,13 @@ public abstract class GuiSmallScreen {
         if(mouseX >= this.xPosition &&  mouseY >= this.yPosition && mouseX < this.xPosition + this.width &&  mouseY < this.yPosition + this.height) {
             for (GuiButtonNew o : buttonList) {
                 GuiButtonNew guibutton = (GuiButtonNew) o;
-                if(guibutton instanceof GuiButtonAdvanced){
-                    GuiButtonAdvanced advanced = (GuiButtonAdvanced) guibutton;
-                    if(advanced.onPress != null){
-                        advanced.onPress.onPress(advanced);
-                        return;
+                if (guibutton.mousePressed(this.mc, mouseX, mouseY)) {
+                    if (guibutton instanceof GuiButtonAdvanced) {
+                        GuiButtonAdvanced advanced = (GuiButtonAdvanced) guibutton;
+                        if (advanced.onPress != null) {
+                            advanced.onPress.onPress(advanced);
+                            return;
+                        }
                     }
                 }
             }
