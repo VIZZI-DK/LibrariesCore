@@ -51,7 +51,7 @@ public class CustomFontRenderer {
             "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя" +
             "ҐЄІЇґєії" +
             "0123456789" +
-            "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" +
+            "!\"#$%&'()*+,-—./:;<=>?@[\\]^_`{|}~" +
             " ";
 
 
@@ -271,7 +271,7 @@ public class CustomFontRenderer {
                 xCurrent+=stringWidthCache.getStringWidth(fontElement.string, uf);
             }
         } else {
-            ArrayList<String> strings = splitString(string, width, ScaleGui.get(111), uf);
+            ArrayList<String> strings = splitString(string, width, uf);
             float yCurrent = 0;
 
             for(String s : strings){
@@ -314,7 +314,7 @@ public class CustomFontRenderer {
         if(width == -1){
             uf.drawString((float)x, (float)y, string, new Color(color));
         } else {
-            ArrayList<String> strings = splitString(string, width, 555, uf);
+            ArrayList<String> strings = splitString(string, width, uf);
             float yCurrent = 0;
 
             for(String s : strings){
@@ -365,38 +365,69 @@ public class CustomFontRenderer {
 
 
 
-    public static ArrayList<String> splitString(String input, float maxWidth, float maxHeight, UnicodeFont uf) {
+    public static ArrayList<String> splitString(String input, float maxWidth, UnicodeFont uf) {
         ArrayList<String> splitStrings = new ArrayList<>();
         float wCurrent = 0;
+        StringBuilder element = new StringBuilder();
 
         String[] inputMas = input.split(" ");
-        String element = "";
-
-        for(int i = 0; i < inputMas.length; i++){
-            String s;
-            if(i+1==inputMas.length){
-                s = inputMas[i]+"";
-            } else {
-                s = inputMas[i]+" ";
-            }
+        for (int i = 0; i < inputMas.length; i++) {
+            String word = inputMas[i];
+            String s = (i + 1 == inputMas.length) ? word : word + " ";
             float widthM = uf.getWidth(s);
-            if(wCurrent + widthM <= maxWidth){
-                wCurrent+=widthM;
-                element+=s;
+
+            if (widthM > maxWidth) {
+                // Если слово длиннее maxWidth, разбиваем его на части
+                if (element.length() > 0) {
+                    splitStrings.add(element.toString());
+                    element.setLength(0);
+                    wCurrent = 0;
+                }
+                splitStrings.addAll(splitLongWord(word, maxWidth, uf));
             } else {
-                splitStrings.add(element);
-                element = "";
-                wCurrent = 0;
-                wCurrent+=widthM;
-                element+=s;
+                if (wCurrent + widthM <= maxWidth) {
+                    wCurrent += widthM;
+                    element.append(s);
+                } else {
+                    splitStrings.add(element.toString());
+                    element.setLength(0);
+                    wCurrent = widthM;
+                    element.append(s);
+                }
             }
         }
-        if(wCurrent!=0){
-            splitStrings.add(element);
+        if (element.length() > 0) {
+            splitStrings.add(element.toString());
         }
 
         return splitStrings;
     }
+
+    private static ArrayList<String> splitLongWord(String word, float maxWidth, UnicodeFont uf) {
+        ArrayList<String> parts = new ArrayList<>();
+        StringBuilder part = new StringBuilder();
+        float wCurrent = 0;
+
+        for (char c : word.toCharArray()) {
+            String s = String.valueOf(c);
+            float widthM = uf.getWidth(s);
+            if (wCurrent + widthM > maxWidth) {
+                parts.add(part.toString());
+                part.setLength(0);
+                wCurrent = 0;
+            }
+            wCurrent += widthM;
+            part.append(c);
+        }
+        if (part.length() > 0) {
+            parts.add(part.toString());
+        }
+
+        return parts;
+    }
+
+
+
 
     private static Color getColor(char s, int color) {
         Color c = colors.get(String.valueOf(s));

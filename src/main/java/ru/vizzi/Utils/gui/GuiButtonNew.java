@@ -46,8 +46,6 @@ public class GuiButtonNew extends Gui
 
     public GuiButtonNew(int p_i1021_1_, float p_i1021_2_, float p_i1021_3_, float p_i1021_4_, float p_i1021_5_, String p_i1021_6_)
     {
-        this.width = 200;
-        this.height = 20;
 
         this.enabled = true;
         this.visible = true;
