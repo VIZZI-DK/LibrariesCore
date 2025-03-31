@@ -51,10 +51,18 @@ public class NBTTagCompoundToJsonConverter {
 
     private static JsonElement convertListToJson(NBTTagList list) {
         JsonArray jsonArray = new JsonArray();
-        for (int i = 0; i < list.tagCount(); i++) {
-            NBTBase elementTag = list.getCompoundTagAt(i);
-            JsonElement element = convertTagToJson(elementTag);
-            jsonArray.add(element);
+        if(list.func_150303_d() == 8){
+            for (int i = 0; i < list.tagCount(); i++) {
+                NBTBase elementTag = new NBTTagString(list.getStringTagAt(i));
+                JsonElement element = convertTagToJson(elementTag);
+                jsonArray.add(element);
+            }
+        } else {
+            for (int i = 0; i < list.tagCount(); i++) {
+                NBTBase elementTag = list.getCompoundTagAt(i);
+                JsonElement element = convertTagToJson(elementTag);
+                jsonArray.add(element);
+            }
         }
         return jsonArray;
     }

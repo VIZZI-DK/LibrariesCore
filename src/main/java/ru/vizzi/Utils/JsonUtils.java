@@ -152,16 +152,25 @@ public class JsonUtils {
 		}
 		public void writeArray(JsonWriter out, JsonArray jsonArray) throws IOException {
 			out.beginArray();
-			for (JsonElement value : jsonArray) {
-				if(value.isJsonObject()){
-					JsonObject jsonObject1 = value.getAsJsonObject();
-					writeObject(out, jsonObject1);
-				} else {
-					System.out.println(value);
+			for (JsonElement element : jsonArray) {
+				if (element.isJsonObject()) {
+					writeObject(out, element.getAsJsonObject());
+				} else if (element.isJsonArray()) {
+					writeArray(out, element.getAsJsonArray());
+				} else if (element.isJsonPrimitive()) {
+					JsonPrimitive prim = element.getAsJsonPrimitive();
+					if (prim.isString()) {
+						out.value(prim.getAsString());
+					} else if (prim.isBoolean()) {
+						out.value(prim.getAsBoolean());
+					} else if (prim.isNumber()) {
+						out.value(prim.getAsNumber());
+					}
 				}
 			}
 			out.endArray();
 		}
+
 
 		@Override
 		public NBTTagCompound read(JsonReader in) {
