@@ -370,38 +370,48 @@ public class CustomFontRenderer {
         float wCurrent = 0;
         StringBuilder element = new StringBuilder();
 
-        String[] inputMas = input.split(" ");
-        for (int i = 0; i < inputMas.length; i++) {
-            String word = inputMas[i];
-            String s = (i + 1 == inputMas.length) ? word : word + " ";
-            float widthM = uf.getWidth(s);
+        String[] lines = input.split("\\R"); // Разбиваем текст по \n
+        for (String line : lines) {
+            if(line.equals(" ")){
+                splitStrings.add(line);
+                continue;
+            }
+            String[] words = line.split(" ");
 
-            if (widthM > maxWidth) {
-                // Если слово длиннее maxWidth, разбиваем его на части
-                if (element.length() > 0) {
-                    splitStrings.add(element.toString());
-                    element.setLength(0);
-                    wCurrent = 0;
-                }
-                splitStrings.addAll(splitLongWord(word, maxWidth, uf));
-            } else {
-                if (wCurrent + widthM <= maxWidth) {
-                    wCurrent += widthM;
-                    element.append(s);
+            for (int i = 0; i < words.length; i++) {
+                String word = words[i];
+                String s = (i + 1 == words.length) ? word : word + " ";
+                float widthM = uf.getWidth(s);
+
+                if (widthM > maxWidth) {
+                    if (element.length() > 0) {
+                        splitStrings.add(element.toString());
+                        element.setLength(0);
+                        wCurrent = 0;
+                    }
+                    splitStrings.addAll(splitLongWord(word, maxWidth, uf));
                 } else {
-                    splitStrings.add(element.toString());
-                    element.setLength(0);
-                    wCurrent = widthM;
-                    element.append(s);
+                    if (wCurrent + widthM <= maxWidth) {
+                        wCurrent += widthM;
+                        element.append(s);
+                    } else {
+                        splitStrings.add(element.toString());
+                        element.setLength(0);
+                        wCurrent = widthM;
+                        element.append(s);
+                    }
                 }
             }
-        }
-        if (element.length() > 0) {
-            splitStrings.add(element.toString());
+            if (element.length() > 0) {
+                splitStrings.add(element.toString());
+                element.setLength(0);
+                wCurrent = 0;
+            }
         }
 
         return splitStrings;
     }
+
 
     private static ArrayList<String> splitLongWord(String word, float maxWidth, UnicodeFont uf) {
         ArrayList<String> parts = new ArrayList<>();
