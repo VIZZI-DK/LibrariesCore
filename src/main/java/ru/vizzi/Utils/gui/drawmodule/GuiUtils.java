@@ -328,7 +328,27 @@ public class GuiUtils {
         GL11.glScissor(posX, Display.getHeight() - (posY + endY), endX, endY);
         // GL11.glScissor(posX, posY, endX, endY);
     }
+    public void drawGuiItem(ItemStack itemStack, float x, float y, float scaleImage) {
+        drawGuiItem(itemStack, x, y, scaleImage * 16.0F, scaleImage * 16.0F);
+    }
 
+
+    public static void drawGuiItem(ItemStack itemStack, float x, float y, float width, float height) {
+        GL11.glPushMatrix();
+        RenderHelper.enableGUIStandardItemLighting();
+        GL11.glEnable(2929);
+        OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, 240.0F, 240.0F);
+        GL11.glEnable(32826);
+        GL11.glTranslatef(x, y, 0.0F);
+        GL11.glScalef(width / 16.0F, height / 16.0F, width / 16.0F);
+        itemRenderer.renderItemAndEffectIntoGUI(null, Minecraft.getMinecraft().getTextureManager(), itemStack, 0, 0);
+        GL11.glDisable(2929);
+        RenderHelper.disableStandardItemLighting();
+        GL11.glAlphaFunc(516, 0.01F);
+        OpenGlHelper.glBlendFunc(770, 771, 1, 0);
+        GL11.glDisable(3008);
+        GL11.glPopMatrix();
+    }
 
     public static void drawItemStackIntoGUI(ItemStack itemstack, int posX, int posY, double scale) {
         if (itemstack != null) {
