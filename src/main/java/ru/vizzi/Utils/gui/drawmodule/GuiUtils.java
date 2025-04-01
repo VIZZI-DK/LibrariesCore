@@ -353,8 +353,8 @@ public class GuiUtils {
             GL11.glScaled(scale, scale, scale);
 
             // Включаем освещение
-            GL11.glEnable(GL11.GL_LIGHTING);
             RenderHelper.enableGUIStandardItemLighting();
+            GL11.glEnable(GL11.GL_LIGHTING);
 
             itemRendererNew.renderItemAndEffectIntoGUI(
                     Minecraft.getMinecraft().fontRenderer,

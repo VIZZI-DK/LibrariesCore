@@ -45,9 +45,12 @@ public class GuiExtended extends AbstractGuiScreenAdvanced {
     }
 
     public void drawButtons(int mx, int my, float ticks) {
+        boolean activeModule = getActiveModule() != null;
         for (Object button : buttonList) {
             if (button instanceof GuiButtonAdvanced) {
-                ((GuiButtonAdvanced) button).drawButton(mx, my);
+                GuiButtonAdvanced advanced = (GuiButtonAdvanced) button;
+                advanced.hovered = advanced.isHovered(mx,my) && !activeModule;
+                advanced.drawButton(mx, my);
             }
 
         }

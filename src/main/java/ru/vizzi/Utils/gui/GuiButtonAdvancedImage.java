@@ -24,11 +24,6 @@ public class GuiButtonAdvancedImage extends GuiButtonAdvanced {
 
     public void drawButton(int mouseX, int mouseY) {
 		if (visible) {
-			boolean hovered = isHovered(mouseX, mouseY);
-			if (hovered && !this.hovered) {
-				// SoundUtils.playGuiSound(SoundType.BUTTON_HOVER);
-			}
-			this.hovered = hovered;
 			updateAnimation(hovered);
 
 			if (colorBackground != -1) {

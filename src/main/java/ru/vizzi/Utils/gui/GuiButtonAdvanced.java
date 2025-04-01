@@ -84,11 +84,7 @@ public class GuiButtonAdvanced extends GuiButtonNew {
 
 	public void drawButton(int mouseX, int mouseY) {
 		if (visible) {
-			boolean hovered = isHovered(mouseX, mouseY);
-			if (hovered && !this.hovered) {
-				// SoundUtils.playGuiSound(SoundType.BUTTON_HOVER);
-			}
-			this.hovered = hovered;
+
 			updateAnimation(hovered);
 
 			if (colorBackground != -1) {
@@ -136,7 +132,7 @@ public class GuiButtonAdvanced extends GuiButtonNew {
 		return false;
 	}
 
-	protected boolean isHovered(int mouseX, int mouseY) {
+	public boolean isHovered(int mouseX, int mouseY) {
 
 		return this.field_146123_n = mouseX >= this.xPosition && mouseY >= this.yPosition
 				&& mouseX < this.xPosition + this.width && mouseY < this.yPosition + this.height;
