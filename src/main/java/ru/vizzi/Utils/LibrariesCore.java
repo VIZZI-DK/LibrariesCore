@@ -1,5 +1,6 @@
 package ru.vizzi.Utils;
 
+import java.io.File;
 import java.util.Queue;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
@@ -10,6 +11,7 @@ import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 
 import com.google.common.util.concurrent.ListenableFutureTask;
+import com.sun.jna.NativeLibrary;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -18,6 +20,7 @@ import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.RenderGlobal;
 import net.minecraftforge.common.MinecraftForge;
 import org.apache.commons.lang3.Validate;
 import ru.justagod.cutter.GradleSide;
@@ -50,11 +53,11 @@ public class LibrariesCore {
 	private final Queue queue = Queues.newArrayDeque();
 
 	public static LibrariesConfig librariesConfig;
-	
 
 	@EventHandler
 	@IgnoreObf
 	   public void preInit(FMLPreInitializationEvent event) {
+
 
 	//	MainDecryptor mainDecryptor = new MainDecryptor();
 
@@ -68,7 +71,7 @@ public class LibrariesCore {
 	      if(isClient) {
 	    	  textureLoader = new TextureLoader();
 	    	  CoreAPI.init();
-
+			  RenderGlobal
 			 // ClientRegistry.bindTileEntitySpecialRenderer(TileTest.class, new RenderTest());
 
 	      };
@@ -103,6 +106,8 @@ public class LibrariesCore {
 		 } catch (Exception e){
 
 		 }
+
+		//VideoHandler.init();
 	    
 	      
 	   }
@@ -198,7 +203,7 @@ public class LibrariesCore {
 			}
 			catch (Exception exception)
 			{
-				return Futures.immediateFailedCheckedFuture(exception);
+				return FutureUtils.immediateFailedFuture(exception);
 			}
 		}
 	}

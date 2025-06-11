@@ -23,6 +23,9 @@ public class LuxinfineProvider {
     @ConfigValue("Провайдер экономики")
     public static LazyConfigValue<Economy> economy = ConfigAPI.lazy("dummy");
 
+    @ConfigValue("Провайдер реальной валюты")
+    public static LazyConfigValue<Economy> economyReal = ConfigAPI.lazy("dummy");
+
     @ConfigValue("Провайдер регионов")
     public static LazyConfigValue<Regions> region = ConfigAPI.lazy("dummy");
 

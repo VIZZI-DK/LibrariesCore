@@ -4,37 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e55d464f-cc28-483a-b492-fedd0e62e257" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/lib/JarSplitterAPI-1.7.10-dev.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/LuxinfineHelper-1.7.10-1.7-dev.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/librariescore/fonts/2_Bold.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibrariesCore.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.ipr" afterDir="false" />
+    <list default="true" id="e55d464f-cc28-483a-b492-fedd0e62e257" name="Changes" comment="prod">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/FutureUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/GifDecoder/Gif.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/toast/AdvancedToast.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/toast/ClientEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/toast/GuiToast.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/toast/IToast.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/librariescore/textures/gui/default.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrariesCore.iws" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibrariesCore.rar" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.rar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrariesCore.rar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrariesCore.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibrariesCore.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LuxinfineHelper-u-server (1)-deobf.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ClientEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/ClientEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/CustomFontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/CustomFontRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/EnumStringRenderType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/EnumStringRenderType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/FontContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/StringWidthCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/StringWidthCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/TextRenderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/CustomFont/TextRenderUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/GuiScreenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/GuiScreenUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/JarSplitterAPI-1.7.10-dev.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/JarSplitterAPI-1.7.10-dev.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LuxinfineHelper-1.7.10-1.7-dev.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/GifDecoder/GifDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/GifDecoder/GifDecoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/LibrariesCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/EventLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/EventLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/RegistryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/eventhandler/RegistryEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiButtonNew.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiExtended.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiExtended.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiSmallScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/gui/GuiSmallScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/permission/LuxinfineProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/permission/LuxinfineProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/player/ExtendedManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/player/ExtendedManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/PreLoadableResourceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/resouces/PreLoadableResourceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/methods.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pack.mcmeta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/librariescore/models/blocks/test.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/librariescore/models/blocks/test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/librariescore/textures.gui/pixel.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +35,7 @@
     <option name="REVERSE_PATCH" value="false" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="16913" />
+    <option name="totalTimeSeconds" value="44645" />
   </component>
   <component name="DebuggerManager">
     <breakpoint_any converted="true">
@@ -185,21 +174,21 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Java/MyProduct/LibrariesCore/src/main/resources/assets/librariescore/fonts&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java/MyProduct/LibrariesCore/src/main/java/ru/vizzi/Utils&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
     &quot;settings.editor.splitter.proportion&quot;: &quot;0.27494907&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources\assets\librariescore\fonts" />
+      <recent name="D:\Java\MyProduct\LibrariesCore\src\main\java\ru\vizzi\Utils" />
+      <recent name="D:\Java\MyProduct\LibrariesCore\eclipse" />
+      <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources\assets\librariescore\textures.gui" />
+      <recent name="D:\Java\MyProduct\LibrariesCore\eclipse\vlc" />
       <recent name="D:\Java\MyProduct\LibrariesCore\lib" />
-      <recent name="D:\Java\MyProduct\LibrariesCore\src\main\java\ru\vizzi\Utils\Models" />
-      <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources" />
-      <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources\assets\librariescore" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Java\MyProduct\LibrariesCore\src\main\resources\assets\librariescore\fonts" />
@@ -213,7 +202,7 @@
       <recent name="ru.vizzi.Utils.CustomFont" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LibrariesCore [build]">
+  <component name="RunManager" selected="Gradle.LibrariesCore [buildAll]">
     <configuration default="true" factoryName="Applet" type="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -234,10 +223,10 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <configuration name="Minecraft Client" type="Application" factoryName="Application">
+    <configuration name="Minecraft Client" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="GradleStart" />
       <module name="LibrariesCore.main" />
-      <option name="VM_PARAMETERS" value="-Xincgc -Xmx1024M -Xms1024M" />
+      <option name="VM_PARAMETERS" value="-Xincgc -Xmx1024M -Xms1024M -Djna.library.path=D:\Java\MyProduct\LibrariesCore\eclipse\vlc" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/eclipse" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -399,17 +388,17 @@
     <list>
       <item itemvalue="Application.Minecraft Client" />
       <item itemvalue="Application.Minecraft Server" />
-      <item itemvalue="Gradle.LibrariesCore [buildServer]" />
       <item itemvalue="Gradle.LibrariesCore [buildAll]" />
       <item itemvalue="Gradle.LibrariesCore [buildClient]" />
+      <item itemvalue="Gradle.LibrariesCore [buildServer]" />
       <item itemvalue="Gradle.LibrariesCore [build]" />
       <item itemvalue="Gradle.LibrariesCore [encodeResources]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LibrariesCore [build]" />
-        <item itemvalue="Gradle.LibrariesCore [buildServer]" />
         <item itemvalue="Gradle.LibrariesCore [buildAll]" />
+        <item itemvalue="Gradle.LibrariesCore [buildServer]" />
+        <item itemvalue="Gradle.LibrariesCore [build]" />
         <item itemvalue="Gradle.LibrariesCore [buildClient]" />
         <item itemvalue="Gradle.LibrariesCore [encodeResources]" />
       </list>
@@ -467,7 +456,63 @@
       <option name="project" value="LOCAL" />
       <updated>1719971012692</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="prod">
+      <option name="closed" value="true" />
+      <created>1739750365460</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739750365461</updated>
+    </task>
+    <task id="LOCAL-00006" summary="prod">
+      <option name="closed" value="true" />
+      <created>1743447983140</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743447983140</updated>
+    </task>
+    <task id="LOCAL-00007" summary="prod">
+      <option name="closed" value="true" />
+      <created>1743448970344</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743448970344</updated>
+    </task>
+    <task id="LOCAL-00008" summary="prod">
+      <option name="closed" value="true" />
+      <created>1743534510696</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743534510696</updated>
+    </task>
+    <task id="LOCAL-00009" summary="prod">
+      <option name="closed" value="true" />
+      <created>1743535733117</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743535733117</updated>
+    </task>
+    <task id="LOCAL-00010" summary="prod">
+      <option name="closed" value="true" />
+      <created>1743535947821</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743535947821</updated>
+    </task>
+    <task id="LOCAL-00011" summary="prod">
+      <option name="closed" value="true" />
+      <created>1743540388736</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743540388736</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -481,7 +526,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -498,7 +543,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="prod" />
+    <option name="LAST_COMMIT_MESSAGE" value="prod" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -535,9 +581,14 @@
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/vizzi/Utils/JsonUtils.java</url>
-          <line>169</line>
-          <option name="timeStamp" value="27" />
+          <url>jar://$PROJECT_DIR$/build/dirtyArtifacts/forgeSrc-1.7.10-10.13.4.1614-1.7.10-sources.jar!/net/minecraft/client/entity/AbstractClientPlayer.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/net/minecraft/entity/EntityTrackerEntry.java</url>
+          <line>654</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

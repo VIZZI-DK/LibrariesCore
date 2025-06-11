@@ -33,7 +33,7 @@ apply plugin: 'cutter'
 
 version = "1.0"
 group= "ru.vizzi.LibrariesCore" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "LibrariesCore"
+archivesBaseName = "AALibrariesCore"
 
 minecraft {
     version = "1.7.10-10.13.4.1614-1.7.10"
@@ -60,6 +60,7 @@ dependencies {
         implementation group: 'org.reflections', name: 'reflections', version: '0.9.12'
             compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
     compile fileTree(include: ['*.jar'], dir: 'lib')
+   // compile 'uk.co.caprica:vlcj:3.12.1' // или последнюю 4.x
 
 }
 tasks.withType(JavaCompile){
