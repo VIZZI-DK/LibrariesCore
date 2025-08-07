@@ -18,7 +18,7 @@ public class FontAPI {
             if(fontsCache.get(rs).containsKey(size)){
                 return fontsCache.get(rs).get(size);
             } else {
-                FontContainer fontContainer = new FontContainer(rs.getResourceDomain(), size, rs);
+                FontContainer fontContainer = new FontContainer(rs.getResourcePath(), size, rs);
                 fontsCache.get(rs).put(size, fontContainer);
                 return fontContainer;
             }

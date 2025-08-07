@@ -9,7 +9,6 @@ import ru.vizzi.Utils.config.IConfigGson;
 import java.io.File;
 import java.util.ArrayList;
 
-@RequiredArgsConstructor
 @Setter
 @Getter
 public class ConfigMariaList implements IConfigGson {
@@ -20,7 +19,16 @@ public class ConfigMariaList implements IConfigGson {
     @Configurable
     ArrayList<ConfigDBType> configMariaDBS;
 
+    @Configurable
+    ArrayList<ConfigReplicatorType> replicationDatabase = new ArrayList<>();
+
     private final String filePath;
+
+
+    public ConfigMariaList(String filePath) {
+        this.filePath = filePath;
+        replicationDatabase.add(new ConfigReplicatorType());
+    }
 
     @Override
     public File getConfigFile() {

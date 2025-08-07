@@ -1,7 +1,6 @@
 package ru.vizzi.Utils.gui.drawmodule;
 
 import ru.vizzi.Utils.obf.IgnoreObf;
-@IgnoreObf
 public class AnimationHelper {
     private static float animSpeed;
     private static double oldTime = 0;

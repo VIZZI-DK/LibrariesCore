@@ -20,6 +20,7 @@ import org.lwjgl.opengl.GL11;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.UnicodeFont;
 import org.newdawn.slick.font.effects.ColorEffect;
+import org.newdawn.slick.font.effects.OutlineEffect;
 import ru.justagod.cutter.GradleSide;
 import ru.justagod.cutter.GradleSideOnly;
 import ru.vizzi.Utils.LibrariesCore;
@@ -50,8 +51,8 @@ public class CustomFontRenderer {
     public static String symbolsNew = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" +
             "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя" +
             "ҐЄІЇґєії" +
-            "0123456789" +
-            "!\"#$%&'()*+,-—./:;<=>?@[\\]^_`{|}~" +
+            "0123456789:" +
+            "!\"#$%&'()*+,-—./:;<=>?@[\\]^_`{|}~«»" +
             " ";
 
 
@@ -101,7 +102,14 @@ public class CustomFontRenderer {
                     in.close();
                     boolean bold = font.rs.getResourcePath().toLowerCase().contains("bold");
                     UnicodeFont unicodeFont = new UnicodeFont(fontBase, (int) ScaleGui.get(font.fontSize), bold, false);
+                  //  int scale = ScaleGui.get(25);
+                    //unicodeFont.getEffects().add(new OutlineEffect(scale, java.awt.Color.BLUE));
                     unicodeFont.getEffects().add(new ColorEffect(java.awt.Color.WHITE));
+//
+//                    unicodeFont.setPaddingTop(ScaleGui.get(10));
+//                    unicodeFont.setPaddingBottom(ScaleGui.get(10));
+//                    unicodeFont.setPaddingLeft(scale);
+//                    unicodeFont.setPaddingRight(scale);
                     unicodeFont.addGlyphs(symbolsNew);
                     unicodeFont.setDisplayListCaching(true);
                     return unicodeFont;

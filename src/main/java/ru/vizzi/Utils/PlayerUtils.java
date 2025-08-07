@@ -3,9 +3,12 @@ package ru.vizzi.Utils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.network.NetHandlerPlayClient;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentText;
 import ru.vizzi.Utils.obf.IgnoreObf;
+
+import java.util.List;
 
 /**
  * @author Zloy_GreGan
@@ -30,6 +33,10 @@ public class PlayerUtils {
 
     public static EntityPlayer getOnlinePlayer(String playerName) {
         return MinecraftServer.getServer().getConfigurationManager().func_152612_a(playerName);
+    }
+
+    public static List<EntityPlayerMP> getOnlinePlayers() {
+        return MinecraftServer.getServer().getConfigurationManager().playerEntityList;
     }
 
 }

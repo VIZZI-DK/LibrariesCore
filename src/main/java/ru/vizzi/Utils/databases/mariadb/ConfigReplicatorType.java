@@ -8,7 +8,7 @@ import ru.vizzi.Utils.config.Configurable;
 @Setter
 @NoArgsConstructor
 @Getter
-public class ConfigDBType {
+public class ConfigReplicatorType {
 
     @Configurable
     private String host = "localhost";
@@ -17,7 +17,7 @@ public class ConfigDBType {
     @Configurable
     private String password = "root";
     @Configurable
-    private String database = "test";
+    private int replicationID = 1;
     @Configurable
     private int port = 3306;
 

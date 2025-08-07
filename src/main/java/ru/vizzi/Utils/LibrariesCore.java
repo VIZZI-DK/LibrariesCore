@@ -6,6 +6,10 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 
+import com.github.shyiko.mysql.binlog.event.DeleteRowsEventData;
+import com.github.shyiko.mysql.binlog.event.EventData;
+import com.github.shyiko.mysql.binlog.event.UpdateRowsEventData;
+import com.github.shyiko.mysql.binlog.event.WriteRowsEventData;
 import com.google.common.collect.Queues;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -71,7 +75,6 @@ public class LibrariesCore {
 	      if(isClient) {
 	    	  textureLoader = new TextureLoader();
 	    	  CoreAPI.init();
-			  RenderGlobal
 			 // ClientRegistry.bindTileEntitySpecialRenderer(TileTest.class, new RenderTest());
 
 	      };
@@ -103,6 +106,7 @@ public class LibrariesCore {
 
 			 Class.forName("com.mysql.jdbc.Driver");
 			 DatabaseManager.init();
+
 		 } catch (Exception e){
 
 		 }

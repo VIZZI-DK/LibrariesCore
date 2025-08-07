@@ -155,7 +155,6 @@ public class GuiExtended extends AbstractGuiScreenAdvanced {
         for (GuiModule module : modules) {
             if (module.isActive() && (isModuleBox(module, x, y) || module.isSubModuleActive())) {
                 module.handleMouseInput();
-                return;
             }
         }
         super.handleMouseInput();
@@ -169,18 +168,6 @@ public class GuiExtended extends AbstractGuiScreenAdvanced {
     @Override
     public void mouseClicked(int mouseX, int mouseY, int mouseButton) {
         if (mouseButton == 0) {
-            for (GuiModule module : modules) {
-                if (module.isActive()) {
-                    if (isModuleBox(module, mouseX, mouseY) || module.isSubModuleActive()) {
-                        module.mouseClicked(mouseX, mouseY, mouseButton);
-                        return;
-
-                    } else if (module.isGuiFocused()) {
-                        module.setActive(false);
-                        return;
-                    }
-                }
-            }
             for (Object o : buttonList) {
                 if (o instanceof GuiButton) {
                     GuiButton guibutton = (GuiButton) o;

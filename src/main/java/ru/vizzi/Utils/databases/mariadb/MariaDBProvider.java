@@ -1,5 +1,6 @@
 package ru.vizzi.Utils.databases.mariadb;
 
+import lombok.Getter;
 import lombok.SneakyThrows;
 import ru.vizzi.Utils.LibrariesCore;
 import ru.vizzi.Utils.databases.BiHolder;
@@ -9,7 +10,7 @@ import javax.annotation.Nullable;
 import java.sql.*;
 
 public class MariaDBProvider {
-
+    @Getter
     private ConfigDBType configDBType;
 
     public MariaDBProvider(ConfigDBType config) {
