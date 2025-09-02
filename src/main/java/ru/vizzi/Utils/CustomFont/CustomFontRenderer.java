@@ -77,7 +77,7 @@ public class CustomFontRenderer {
                 UnicodeFont unicodeFont = new UnicodeFont(fontBase, (int) ScaleGui.get(font.fontSize), bold, false);
                 unicodeFont.getEffects().add(new ColorEffect(java.awt.Color.WHITE));
                 unicodeFont.addGlyphs(symbolsNew);
-                unicodeFont.setDisplayListCaching(true);
+                unicodeFont.setDisplayListCaching(false);
                 unicodeFont.loadGlyphs();
                 cache.put(name, unicodeFont);
                 return unicodeFont;
@@ -111,7 +111,7 @@ public class CustomFontRenderer {
 //                    unicodeFont.setPaddingLeft(scale);
 //                    unicodeFont.setPaddingRight(scale);
                     unicodeFont.addGlyphs(symbolsNew);
-                    unicodeFont.setDisplayListCaching(true);
+                    unicodeFont.setDisplayListCaching(false);
                     return unicodeFont;
                 } catch (Exception e){
                     e.printStackTrace();
@@ -263,7 +263,7 @@ public class CustomFontRenderer {
         if(uf == null){
             return;
         }
-        GL11.glPushAttrib(GL11.GL_ALL_ATTRIB_BITS);
+
         //GL11.glScalef((float)1, (float)1, (float)1.0f);
         GL11.glScaled(1.0001, 1.0001, 0);
         GL11.glEnable(GL11.GL_BLEND);
@@ -301,7 +301,6 @@ public class CustomFontRenderer {
         GL11.glEnable(GL11.GL_TEXTURE_2D);
         GL11.glDisable(GL11.GL_BLEND);
         GL11.glScalef((float)1, (float)1, (float)1.0f);
-        GL11.glPopAttrib();
     }
 
     public static void drawStringWithMaxWidthNoValid(String string, double x, double y, float width, int color, FontContainer font, EnumStringRenderType type) {
