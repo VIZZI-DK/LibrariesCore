@@ -263,6 +263,7 @@ public class CustomFontRenderer {
         if(uf == null){
             return;
         }
+        GL11.glPushAttrib(GL11.GL_ALL_ATTRIB_BITS);
         //GL11.glScalef((float)1, (float)1, (float)1.0f);
         GL11.glScaled(1.0001, 1.0001, 0);
         GL11.glEnable(GL11.GL_BLEND);
@@ -300,6 +301,7 @@ public class CustomFontRenderer {
         GL11.glEnable(GL11.GL_TEXTURE_2D);
         GL11.glDisable(GL11.GL_BLEND);
         GL11.glScalef((float)1, (float)1, (float)1.0f);
+        GL11.glPopAttrib();
     }
 
     public static void drawStringWithMaxWidthNoValid(String string, double x, double y, float width, int color, FontContainer font, EnumStringRenderType type) {
