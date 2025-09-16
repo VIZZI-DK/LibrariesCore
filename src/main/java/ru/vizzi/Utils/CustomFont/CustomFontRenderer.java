@@ -77,7 +77,7 @@ public class CustomFontRenderer {
                 UnicodeFont unicodeFont = new UnicodeFont(fontBase, (int) ScaleGui.get(font.fontSize), bold, false);
                 unicodeFont.getEffects().add(new ColorEffect(java.awt.Color.WHITE));
                 unicodeFont.addGlyphs(symbolsNew);
-                unicodeFont.setDisplayListCaching(false);
+                unicodeFont.setDisplayListCaching(true);
                 unicodeFont.loadGlyphs();
                 cache.put(name, unicodeFont);
                 return unicodeFont;
@@ -111,7 +111,7 @@ public class CustomFontRenderer {
 //                    unicodeFont.setPaddingLeft(scale);
 //                    unicodeFont.setPaddingRight(scale);
                     unicodeFont.addGlyphs(symbolsNew);
-                    unicodeFont.setDisplayListCaching(false);
+                    unicodeFont.setDisplayListCaching(true);
                     return unicodeFont;
                 } catch (Exception e){
                     e.printStackTrace();
