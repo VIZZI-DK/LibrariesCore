@@ -15,8 +15,8 @@ buildscript {
             url = "https://maven.minecraftforge.net/"
         }
         maven {
-            name = "sonatype"
-            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+            name = "daporkchop"
+            url = "https://maven.daporkchop.net/"
         }
     }
     dependencies {
@@ -61,6 +61,7 @@ dependencies {
             compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
     compile fileTree(include: ['*.jar'], dir: 'lib')
     implementation group: 'com.github.shyiko', name: 'mysql-binlog-connector-java', version: '0.21.0'
+    annotationProcessor "org.projectlombok:lombok:1.18.10", "io.gitlab.hohserg.elegant.networking:annotation-processor:3.14"
    // compile 'uk.co.caprica:vlcj:3.12.1' // или последнюю 4.x
 
 }

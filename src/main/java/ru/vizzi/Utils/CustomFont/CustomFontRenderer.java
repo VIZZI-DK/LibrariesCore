@@ -50,10 +50,8 @@ public class CustomFontRenderer {
     private static String symbols = " +=0123456789абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!-_()|?,./\"'[]{}*&^:%$₽;№@#~`><•і";
     public static String symbolsNew = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" +
             "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя" +
-            "ҐЄІЇґєії" +
-            "0123456789:" +
-            "!\"#$%&'()*+,-—./:;<=>?@[\\]^_`{|}~«»" +
-            " ";
+            "0123456789:!\"#$%&'()*+,-–—./:;<=>?@[\\]^_`{|}~«»" +
+            "ҐЄІЇґєії₽№ ";
 
 
     public CustomFontRenderer() {
@@ -77,6 +75,8 @@ public class CustomFontRenderer {
                 UnicodeFont unicodeFont = new UnicodeFont(fontBase, (int) ScaleGui.get(font.fontSize), bold, false);
                 unicodeFont.getEffects().add(new ColorEffect(java.awt.Color.WHITE));
                 unicodeFont.addGlyphs(symbolsNew);
+                unicodeFont.addAsciiGlyphs();
+                unicodeFont.addGlyphs(0x0020, 0xFFFF); // Все символы от пробела до конца BMP
                 unicodeFont.setDisplayListCaching(true);
                 unicodeFont.loadGlyphs();
                 cache.put(name, unicodeFont);
@@ -111,6 +111,8 @@ public class CustomFontRenderer {
 //                    unicodeFont.setPaddingLeft(scale);
 //                    unicodeFont.setPaddingRight(scale);
                     unicodeFont.addGlyphs(symbolsNew);
+                    unicodeFont.addAsciiGlyphs();
+                    unicodeFont.addGlyphs(0x0020, 0xFFFF); // Все символы от пробела до конца BMP
                     unicodeFont.setDisplayListCaching(true);
                     return unicodeFont;
                 } catch (Exception e){
