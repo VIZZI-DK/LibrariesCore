@@ -4,6 +4,11 @@ import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonNull;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.google.gson.internal.Primitives;
 import com.google.gson.reflect.TypeToken;
 import lombok.Cleanup;
@@ -20,6 +25,9 @@ import java.lang.reflect.Modifier;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public interface IConfigGson {
@@ -127,19 +135,14 @@ public interface IConfigGson {
 
     default void loadExceptionally() throws NoSuchFieldException, IllegalAccessException, IOException {
         if(getConfigFile().exists()) {
-            @Cleanup BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(getConfigFile()), StandardCharsets.UTF_8));
-            StringBuilder source = new StringBuilder();
-            String line;
-            while((line = bufferedReader.readLine()) != null) {
-                int commentIndex = line.indexOf(COMMENT_PREFIX);
-                if(commentIndex != -1) {
-                    line = line.substring(0, commentIndex);
-                }
-                source.append(line).append("\n");
-            }
+            String source = readConfigSource(getConfigFile());
+            JsonElement sourceElement;
+            JsonElement mergedElement;
             IConfigGson configGson;
             try {
-                configGson = GSON.fromJson(source.toString(), this.getClass());
+                sourceElement = new JsonParser().parse(source);
+                mergedElement = mergeJsonElements(GSON.toJsonTree(this), sourceElement);
+                configGson = GSON.fromJson(mergedElement, this.getClass());
             } catch (Exception t) {
                 throw new IOException("An error has occurred during loading of config: " + getConfigFile().getName(), t);
             }
@@ -156,6 +159,11 @@ public interface IConfigGson {
                         }
                     }
                 }
+            }
+
+            if (!jsonElementsEqual(sourceElement, mergedElement)) {
+                backupConfigFile();
+                save();
             }
         } else {
             LOGGER.info("Creating config " + getConfigFile().getPath());
@@ -251,6 +259,108 @@ public interface IConfigGson {
 
     default boolean canReload(){
         return true;
+    }
+
+    static String readConfigSource(File configFile) throws IOException {
+        @Cleanup BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(configFile), StandardCharsets.UTF_8));
+        StringBuilder source = new StringBuilder();
+        String line;
+        while((line = bufferedReader.readLine()) != null) {
+            int commentIndex = line.indexOf(COMMENT_PREFIX);
+            if(commentIndex != -1) {
+                line = line.substring(0, commentIndex);
+            }
+            source.append(line).append("\n");
+        }
+        return source.toString();
+    }
+
+    static JsonElement mergeJsonElements(JsonElement defaults, JsonElement existing) {
+        if (existing == null || existing.isJsonNull()) {
+            return copyJsonElement(defaults);
+        }
+        if (defaults == null || defaults.isJsonNull()) {
+            return copyJsonElement(existing);
+        }
+
+        if (defaults.isJsonObject() && existing.isJsonObject()) {
+            JsonObject merged = copyJsonObject(defaults.getAsJsonObject());
+            JsonObject existingObject = existing.getAsJsonObject();
+            for (Map.Entry<String, JsonElement> entry : existingObject.entrySet()) {
+                String key = entry.getKey();
+                JsonElement defaultValue = merged.get(key);
+                if (defaultValue != null) {
+                    merged.add(key, mergeJsonElements(defaultValue, entry.getValue()));
+                } else {
+                    merged.add(key, copyJsonElement(entry.getValue()));
+                }
+            }
+            return merged;
+        }
+
+        if (defaults.isJsonArray() && existing.isJsonArray()) {
+            JsonArray defaultArray = defaults.getAsJsonArray();
+            JsonArray existingArray = existing.getAsJsonArray();
+            JsonArray merged = new JsonArray();
+            for (int i = 0; i < existingArray.size(); i++) {
+                JsonElement defaultValue = i < defaultArray.size() ? defaultArray.get(i) : null;
+                merged.add(mergeJsonElements(defaultValue, existingArray.get(i)));
+            }
+            return merged;
+        }
+
+        return copyJsonElement(existing);
+    }
+
+    static JsonElement copyJsonElement(JsonElement element) {
+        if (element == null || element.isJsonNull()) {
+            return JsonNull.INSTANCE;
+        }
+        if (element.isJsonObject()) {
+            return copyJsonObject(element.getAsJsonObject());
+        }
+        if (element.isJsonArray()) {
+            JsonArray copy = new JsonArray();
+            for (JsonElement item : element.getAsJsonArray()) {
+                copy.add(copyJsonElement(item));
+            }
+            return copy;
+        }
+        return new JsonParser().parse(element.toString());
+    }
+
+    static JsonObject copyJsonObject(JsonObject object) {
+        JsonObject copy = new JsonObject();
+        for (Map.Entry<String, JsonElement> entry : object.entrySet()) {
+            copy.add(entry.getKey(), copyJsonElement(entry.getValue()));
+        }
+        return copy;
+    }
+
+    static boolean jsonElementsEqual(JsonElement first, JsonElement second) {
+        if (first == null) {
+            return second == null;
+        }
+        return first.equals(second);
+    }
+
+    default void backupConfigFile() {
+        File configFile = getConfigFile();
+        if (!configFile.exists()) {
+            return;
+        }
+        String timestamp = new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date());
+        File backupFile = new File(configFile.getParentFile(), configFile.getName() + "." + timestamp + ".bak");
+        try {
+            if (backupFile.getParentFile() != null) {
+                //noinspection ResultOfMethodCallIgnored
+                backupFile.getParentFile().mkdirs();
+            }
+            Files.copy(configFile.toPath(), backupFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            LOGGER.info("Backup config created: " + backupFile.getPath());
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to backup config " + configFile.getAbsolutePath(), e);
+        }
     }
 
     File getConfigFile();
